@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "healing-ionic",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
