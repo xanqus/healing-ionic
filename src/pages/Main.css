@@ -1,0 +1,169 @@
+.main-body__background {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.main-body__header {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  width: 100vw;
+  background-image: url("../assets/main/h-main-top-bg.png");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: flex-start;
+  justify-content: center;
+  /*질문 : 삭제했을때 왜 왼쪽부터 채워지는가*/
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+}
+
+.main-header__wrapper {
+  display: flex;
+  width: 100vw;
+  height: 45px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header__homeButton {
+  width: 20px;
+  height: 20px;
+}
+
+.main-header__logo {
+  width: 70px;
+  height: 30px;
+}
+
+.main-header__menu--wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-header__greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 75px;
+  color: white;
+}
+
+.main-body__graph {
+  display: flex;
+  width: 100vw;
+  height: 276px;
+}
+
+.main-body__graph--bpm {
+  width: 25vw;
+  height: 100%;
+  margin-top: 10px;
+}
+.main-body__graph--graph {
+  width: 50vw;
+  height: 100%;
+  background-color: aqua;
+}
+.main-body__graph--record {
+  width: 25vw;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.main-body__graph--bpmNumber {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.main-body__graph--bpmUnit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-body__icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.main-body__icons--1 {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.main-body__icons--2 {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.main-body__icons--3 {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.main-body__icons--4 {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body__nav {
+  width: 100vw;
+  height: 280px;
+}
+
+.main-body__nav--1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+}
+
+.main-body__nav--2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.main-body__nav--3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+}
+
+.main-body__nav--4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  height: 100%;
+}

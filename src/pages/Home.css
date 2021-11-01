@@ -1,18 +1,19 @@
-.body__background {
+.home-body__background {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
   --background: none;
   background-image: url("../assets/home/h-intro-img-00.png");
-  background-position: center center;
+  background-position: start center;
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
   align-items: flex-end;
+  background-color: blue;
 }
 
-.body__header {
+.home-body__header {
   display: flex;
   height: 50vh;
   width: 100vw;
@@ -21,7 +22,7 @@
   justify-content: center;
 }
 
-.body__wrapper {
+.home-body__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -30,7 +31,7 @@
   height: 50vh;
 }
 
-.body__main--login {
+.home-body__main--login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +42,7 @@
   margin-bottom: 20px;
   border-radius: 5px;
 }
-.body__main--join {
+.home-body__main--join {
   display: flex;
   align-items: center;
   justify-content: center;

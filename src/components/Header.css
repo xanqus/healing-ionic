@@ -1,0 +1,47 @@
+.Header-body__background {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 100vw;
+  background-image: url("../assets/header/h-sub-top.png");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+}
+.Header-body__homeButton--img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.Header-body__logo {
+  width: 70px;
+  height: 30px;
+}
+.Header-body__logo--img {
+  width: 70px;
+  height: 30px;
+  margin-left: 10px;
+  object-fit: contain;
+}
+
+.Header-body__QRButton--img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.Header-body__menuButton--img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.Header-body__menuWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

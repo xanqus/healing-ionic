@@ -1,0 +1,82 @@
+.AudioPlayer-body__background {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+.AudioPlayer-body__background--wave {
+  width: 20%;
+  height: 100%;
+  background-color: aqua;
+}
+
+.AudioPlayer-body__background--timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  background-color: antiquewhite;
+}
+
+.AudioPlayer-body--timeline {
+  width: calc(100% - 30px);
+  height: 10px;
+  border-radius: 5px;
+  background-color: #33353c;
+}
+
+.AudioPlayer-body--timeline--time-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 30px);
+  height: 20px;
+  background-color: white;
+}
+
+.AudioPlayer-body--timeline--time-currentTime {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  font-size: 0.8rem;
+}
+
+.AudioPlayer-body--timeline--time-maxTime {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+  font-size: 0.8rem;
+}
+.AudioPlayer-body__background--buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  background-color: black;
+}
+
+.AudioPlayer-body__background--buttons-prev {
+  width: calc(100% / 3);
+  height: 30px;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.AudioPlayer-body__background--buttons-playPause {
+  width: calc(100% / 3);
+  height: 40px;
+}
+
+.AudioPlayer-body__background--buttons-next {
+  width: calc(100% / 3);
+  height: 30px;
+  padding-right: 3px;
+  padding-left: 3px;
+}
