@@ -1,0 +1,10 @@
+.HealingVideos-body__background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HealingVideos-body__tabMenu {
+  width: 90%;
+  margin-top: 10px;
+}
