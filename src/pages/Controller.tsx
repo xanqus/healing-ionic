@@ -4,8 +4,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Tab1 from "./../components/controller/Tab1";
 import Tab2 from "./../components/controller/Tab2";
+import io from "socket.io-client";
 
 const Controller: React.FC = () => {
+  useEffect(() => {
+    const socket = io("ws://15.165.121.230:7770");
+    socket.on("reading", (data: any) => console.log(data));
+    socket.emit("subscribeToServer", 1000);
+  });
+
   const [currentTab, setCurrentTab] = useState(0);
   const menuArr = [
     { name: "힐링콘텐츠", content: "Tab menu ONE" },
