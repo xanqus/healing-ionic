@@ -45,7 +45,6 @@ const HealingSounds: React.FC = () => {
           </div>
         </div>
       </div>
-      <div></div>
       <div className="HealingSounds-body__sounds--background">
         <TabMenu setCurrentIndex={setCurrentIndex}>
           <AudioBlock

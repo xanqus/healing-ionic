@@ -80,7 +80,44 @@ const Home: React.FC = ({ history }: any) => {
           <div className="main-body__graph--bpmNumber">105</div>
           <div className="main-body__graph--bpmUnit">bpm</div>
         </div>
-        <div className="main-body__graph--graph"></div>
+        <div className="main-body__graph--graph">
+          <div className="single-chart">
+            <svg viewBox="-2 -2 40 40" className="circular-chart orange">
+              <path
+                className="circle-bg"
+                d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+
+              <path
+                className="circle2"
+                strokeDasharray="50, 100"
+                d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <path
+                className="circle"
+                strokeDasharray="40, 100"
+                d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <text x="18" y="20.35" className="percentage">
+                <tspan x="17.5" y="13.25" className="tspan1">
+                  힐링 부족도
+                </tspan>
+                <tspan x="16.5" y="23.55" className="tspan2">
+                  85
+                </tspan>
+                <tspan x="23.75" y="22.85" className="tspan3">
+                  %
+                </tspan>
+              </text>
+            </svg>
+          </div>
+        </div>
         <div className="main-body__graph--record">
           <div className="main-body__graph--nowRecord">
             <img
@@ -193,7 +230,8 @@ const Home: React.FC = ({ history }: any) => {
               src="../assets/main/h-main-menu-1.png"
               alt=""
               onClick={() => {
-                history.push("/selfDiagnosis");
+                alert("준비중입니다.");
+                //history.push("/selfDiagnosis");
               }}
             />
           </div>
@@ -236,7 +274,8 @@ const Home: React.FC = ({ history }: any) => {
               src="../assets/main/h-main-menu-3.png"
               alt=""
               onClick={() => {
-                history.push("/HistoryManagement");
+                alert("준비중입니다.");
+                //history.push("/HistoryManagement");
               }}
             />
           </div>

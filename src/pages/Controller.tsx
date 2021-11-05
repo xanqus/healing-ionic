@@ -5,13 +5,33 @@ import axios from "axios";
 import Tab1 from "./../components/controller/Tab1";
 import Tab2 from "./../components/controller/Tab2";
 import io from "socket.io-client";
+import { withRouter } from "react-router-dom";
 
-const Controller: React.FC = () => {
-  useEffect(() => {
-    const socket = io("ws://15.165.121.230:7770");
-    socket.on("reading", (data: any) => console.log(data));
-    socket.emit("subscribeToServer", 1000);
+const Controller: React.FC = ({ history }: any) => {
+  const executeCommand = (name: any, command: any) => {
+    socket.emit(
+      "executeCommand",
+      { name: name, command: command },
+      (data: any) => {
+        console.log(data);
+      }
+    );
+  };
+  const socket = io("ws://15.165.121.230:7770", {
+    transports: ["websocket"],
   });
+
+  useEffect(() => {
+    socket.on("executeCommand", (data) => {
+      console.log("data", data);
+    });
+  }, []);
+
+  const getCommand = () => {
+    socket.emit("getCommand", (data: any) => {
+      console.log(data);
+    });
+  };
 
   const [currentTab, setCurrentTab] = useState(0);
   const menuArr = [
@@ -20,26 +40,35 @@ const Controller: React.FC = () => {
   ];
   const selectMenuHandler = (index: any) => {
     setCurrentTab(index);
+    if (index === 0) {
+      executeCommand("page1", "healing");
+    } else {
+      executeCommand("page1", "nochul");
+    }
   };
   return (
     <div className="Controller-body__background">
+      {/*<button onClick={getCommand}>명령어 조회</button>
       <button
         onClick={() => {
-          const getData = async () => {
-            const command: any =
-              "SERVER executeCommand {name: :name, command: ‘:start’";
-            const data = await axios.get(
-              "http://15.165.121.230:3000/api/users/1",
-              command
-            );
-            console.log(data);
-          };
-          getData();
+          executeCommand();
         }}
       >
-        테스트
-      </button>
-      <div className="Controller-body__header">리모콘</div>
+        명령어 실행
+      </button>*/}
+      <div className="Controller-body__header">
+        <div>
+          <img
+            onClick={() => {
+              history.push("/main");
+            }}
+            src="../assets/header/h-main-home.png"
+            alt=""
+          />
+        </div>
+        <div>리모콘</div>
+        <div></div>
+      </div>
 
       <div className="Controller-body__menu">
         {menuArr.map((ele, index) => {
@@ -67,4 +96,4 @@ const Controller: React.FC = () => {
   );
 };
 
-export default Controller;
+export default withRouter(Controller);

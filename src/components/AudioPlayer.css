@@ -3,12 +3,12 @@
   flex-direction: row;
   width: 100%;
   height: 100%;
-  background-color: blue;
+  /*background-color: blue;*/
 }
 .AudioPlayer-body__background--wave {
   width: 20%;
   height: 100%;
-  background-color: aqua;
+  /*background-color: aqua;*/
 }
 
 .AudioPlayer-body__background--timeline {
@@ -18,14 +18,17 @@
   justify-content: center;
   width: 50%;
   height: 100%;
-  background-color: antiquewhite;
+  color: white;
+
+  /*background-color: antiquewhite;*/
 }
 
 .AudioPlayer-body--timeline {
   width: calc(100% - 30px);
   height: 10px;
   border-radius: 5px;
-  background-color: #33353c;
+  /*background-color: #33353c;*/
+  background-color: #2385ff;
 }
 
 .AudioPlayer-body--timeline--time-wrapper {
@@ -33,7 +36,7 @@
   flex-direction: row;
   width: calc(100% - 30px);
   height: 20px;
-  background-color: white;
+  /*background-color: white;*/
 }
 
 .AudioPlayer-body--timeline--time-currentTime {

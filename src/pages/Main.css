@@ -59,17 +59,18 @@
 }
 
 .main-body__graph--bpm {
-  width: 25vw;
+  width: 22.5vw;
   height: 100%;
   margin-top: 10px;
 }
 .main-body__graph--graph {
-  width: 50vw;
+  display: flex;
+  align-items: flex-end;
+  width: 55vw;
   height: 100%;
-  background-color: aqua;
 }
 .main-body__graph--record {
-  width: 25vw;
+  width: 22.5vw;
   height: 100%;
   margin-top: 10px;
 }
@@ -166,4 +167,67 @@
   justify-content: flex-start;
   width: 50%;
   height: 100%;
+}
+
+/*그래프 커스텀*/
+.single-chart {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.circular-chart {
+  object-fit: contain;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #f3f4f7;
+  stroke-width: 6;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke: #2385ff;
+  animation: progress 1s ease-out forwards;
+}
+
+.circle2 {
+  fill: none;
+  stroke: #bfc7d5;
+  stroke-width: 6;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.percentage {
+  font-family: sans-serif;
+  text-anchor: middle;
+}
+
+.tspan1 {
+  font-size: 0.165rem;
+  fill: #aaaaaa;
+  letter-spacing: -0.3px;
+}
+.tspan2 {
+  font-weight: bold;
+  font-size: 0.6rem;
+  fill: #32376f;
+}
+.tspan3 {
+  font-weight: bold;
+  font-size: 0.175rem;
+  fill: #32376f;
 }

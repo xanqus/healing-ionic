@@ -77,13 +77,12 @@
   flex-direction: row;
   width: 100%;
   height: 150px;
-  background-color: blue;
 }
 
 .HealingSounds-body__sounds--ControlBar {
   width: 100vw;
   height: 90px;
-  background-color: red;
+  background-color: black;
   position: absolute;
   bottom: 0;
 }

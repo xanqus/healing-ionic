@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+}
+
+.SelfDiagnosis-body__background {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SelfDiagnosis-body {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 700px;
+  background-color: black;
+}
+
+.SelfDiagnosis-body__diagnosis--graph {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 475px;
+  background-color: blue;
+}
+.SelfDiagnosis-body__diagnosis--graph-title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 75px;
+  background-color: aqua;
+}
+
+.SelfDiagnosis-body__diagnosis--graph-title :nth-child(1) {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  color: #2385ff;
+}
+
+.SelfDiagnosis-body__diagnosis--graph-title :nth-child(1) > img {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+.SelfDiagnosis-body__diagnosis--graph-title :nth-child(2) {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-color: blanchedalmond;
+}
+
+.SelfDiagnosis-body__diagnosis--graph-img {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  background-color: white;
+}
+
+.SelfDiagnosis-body__diagnosis--diagnosisItems {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 225px;
+  background-color: red;
+}

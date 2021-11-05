@@ -2,6 +2,8 @@ import "./VideoBlock.css";
 import { Link } from "react-router-dom";
 
 const VideoBlock: any = ({ content, imgURL, currentIndex }: any) => {
+  console.log("currentIndex", currentIndex);
+  console.log(imgURL[0]);
   return (
     <div
       className="VideoBlock-body__background"
@@ -18,7 +20,7 @@ const VideoBlock: any = ({ content, imgURL, currentIndex }: any) => {
       </div>
       <div className="VideoBlock-body__background--status">
         <div className="VideoBlock-body__background--status-title">
-          {content[currentIndex]}
+          {content}
         </div>
         <div className="VideoBlock-body__background--status-status">
           <div className="VideoBlock-body__background--status-playButton">

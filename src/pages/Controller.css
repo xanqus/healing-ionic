@@ -13,8 +13,8 @@
 .Controller-body__header {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  padding-top: 20px;
+  justify-content: space-between;
+
   font-size: 1.5rem;
   color: white;
   width: 100vw;
@@ -26,7 +26,27 @@
   background-size: cover;
   border-radius: 0 0 30px 30px;
   overflow: hidden;
-  background-color: blue;
+}
+
+.Controller-body__header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3);
+  height: 100%;
+  box-sizing: border-box;
+
+  padding-bottom: 5px;
+}
+
+.Controller-body__header > div:nth-child(1) {
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.Controller-body__header > div:nth-child(1) > img {
+  width: 20px;
+  height: 20px;
 }
 
 .Controller-body__menu {

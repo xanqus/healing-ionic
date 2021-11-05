@@ -1,13 +1,13 @@
 .Tab1-body__background {
   width: 100%;
-  height: 100%;
 }
 
 .Tab1-body__blockWrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 112.5px;
+  /*height: 112.5px;*/
+  height: 125px;
 }
 
 .Tab1-body__block--swiper {

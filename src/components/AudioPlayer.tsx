@@ -7,6 +7,18 @@ const AudioPlayer: React.FC = () => {
     <div className="AudioPlayer-body__background">
       <div className="AudioPlayer-body__background--wave"></div>
       <div className="AudioPlayer-body__background--timeline">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            color: "white",
+            width: "80%",
+            height: "30px",
+          }}
+        >
+          조용한 시계소리
+        </div>
         <div className="AudioPlayer-body--timeline"></div>
         <div className="AudioPlayer-body--timeline--time-wrapper">
           <div className="AudioPlayer-body--timeline--time-currentTime">
