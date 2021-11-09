@@ -1,0 +1,29 @@
+.QuestionBlock-body__background {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80px;
+}
+.QuestionBlock-body__question {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  font-size: 13px;
+  letter-spacing: -2px;
+}
+
+.QuestionBlock-body__question > img {
+  width: 8px;
+  height: 8px;
+  margin-right: 2px;
+}
+
+.QuestionBlock-body__scoreBlock--cover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+}

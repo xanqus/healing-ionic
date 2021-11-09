@@ -23,6 +23,16 @@ const Header: React.FC = ({ history }: any) => {
         />
       </div>
       <div className="Header-body__menuWrapper">
+        <div className="Header-body__controller">
+          <img
+            className="Header-body__controller--img"
+            src="../assets/header/h-main-control.png"
+            alt=""
+            onClick={() => {
+              history.push("/controller");
+            }}
+          />
+        </div>
         <div className="Header-body__QRButton">
           <img
             className="Header-body__QRButton--img"

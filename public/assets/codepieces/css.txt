@@ -1,0 +1,9 @@
+///배경색
+background: rgba(1, 2, 2, 0.08);
+
+
+///background image
+background-image: url("../assets/selfDiagnosis/h-sub-2-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;

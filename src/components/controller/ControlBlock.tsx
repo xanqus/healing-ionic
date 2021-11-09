@@ -4,49 +4,57 @@ import { Link } from "react-router-dom";
 import io from "socket.io-client";
 
 const ControlBlock: any = ({
-  imgURLPlaying,
-  imgURL,
+  datas,
   name,
   command,
   socket,
-  blockIndex,
-  setBlockIndex,
   index,
-  imgURLList,
-  setImgURLList,
-  onImgURLList,
-  defaultImgURLList,
+  setData,
+  tabIndex,
 }: any) => {
-  const [test, setTest] = useState(imgURL);
+  const { imgUrl, id } = datas[index];
 
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [count, setCount] = useState(0);
   const executeCommand = (name: any, command: any) => {
     socket.emit("executeCommand", { name, command }, (data: any) => {
       console.log(data);
     });
   };
-
-  useEffect(() => {
-    console.log("isPlaying", isPlaying);
-  }, [count, isPlaying]);
-
-  console.log(blockIndex);
+  if (imgUrl === null) {
+    return null;
+  }
 
   return (
     <div className="ControlBlock-body__background">
       <div className="ControlBlock-body__wrapper">
         <img
           onClick={(event) => {
+            console.log(id);
+            event.preventDefault();
             executeCommand(name, command);
-            console.log(event);
-            setIsPlaying(!isPlaying);
-
-            setCount(count + 1);
-            isPlaying ? setTest(imgURL) : setTest(imgURLPlaying);
+            setData(
+              datas.map((data: any) => {
+                console.log("did", data.id);
+                console.log(
+                  `../assets/controller/thumnail-${data.id + 1}-on.png`
+                );
+                return data.id === index + tabIndex * 12
+                  ? {
+                      ...data,
+                      imgUrl: `../assets/controller/thumnail-${
+                        data.id + 1
+                      }-on.png`,
+                    }
+                  : {
+                      ...data,
+                      imgUrl: `../assets/controller/thumnail-${
+                        data.id + 1
+                      }-off.png`,
+                    };
+              })
+            );
           }}
           className="ControlBlock-body__img"
-          src={test}
+          src={imgUrl}
           alt=""
         />
       </div>

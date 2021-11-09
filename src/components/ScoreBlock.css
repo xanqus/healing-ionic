@@ -1,0 +1,38 @@
+.ScoreBlock-body__background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18%;
+  height: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #dddddd;
+  border: none;
+  color: #555555;
+  font-size: 11px;
+  letter-spacing: -2px;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+.ScoreBlock-body__background::-ms-clear {
+  display: none;
+}
+
+/* input type number 에서 화살표 제거 */
+.ScoreBlock-body__background[type="number"]::-webkit-inner-spin-button,
+.ScoreBlock-body__background[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.selfTest-focused {
+  background-color: #2385ff;
+}

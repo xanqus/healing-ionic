@@ -230,8 +230,7 @@ const Home: React.FC = ({ history }: any) => {
               src="../assets/main/h-main-menu-1.png"
               alt=""
               onClick={() => {
-                alert("준비중입니다.");
-                //history.push("/selfDiagnosis");
+                history.push("/selfDiagnosis");
               }}
             />
           </div>
@@ -274,8 +273,7 @@ const Home: React.FC = ({ history }: any) => {
               src="../assets/main/h-main-menu-3.png"
               alt=""
               onClick={() => {
-                alert("준비중입니다.");
-                //history.push("/HistoryManagement");
+                history.push("/HistoryManagement");
               }}
             />
           </div>

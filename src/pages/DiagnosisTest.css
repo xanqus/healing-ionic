@@ -1,0 +1,46 @@
+.DiagnosisTest-body__background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.DiagnosisTest-body__title {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 60px;
+  font-size: 1.0625rem;
+  font-weight: bold;
+  color: #2385ff;
+  letter-spacing: -1px;
+}
+
+.DiagnosisTest-body__title > img {
+  width: 20px;
+  height: 20px;
+}
+
+.DiagnosisTest-body__content--background {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  min-height: 600px;
+  --background: none;
+  background-image: url("../assets/selfDiagnosis/h-sub-2-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.DiagnosisTest-body__test--submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: #2385ff;
+  color: white;
+  margin-top: 10px;
+  border-radius: 8px;
+}

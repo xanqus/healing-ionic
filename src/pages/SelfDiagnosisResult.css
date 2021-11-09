@@ -1,0 +1,65 @@
+.SelfDiagnosisResult-body__background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(1, 2, 2, 0.08);
+}
+
+.SelfDiagnosisResult-body__title {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 60px;
+  color: #2385ff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.SelfDiagnosisResult-body__title > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.SelfDiagnosisResult-body__content {
+  width: 90%;
+  height: 225px;
+  background-image: url("../assets/selfDiagnosis/h-sub-2-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.SelfDiagnosisResult-body__content--title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 15px;
+  font-size: 0.875rem;
+  color: #2385ff;
+  text-decoration: underline;
+  text-underline-position: under;
+  width: 100%;
+  height: 75px;
+}
+
+.SelfDiagnosisResult-body__content--content {
+  font-size: 0.5rem;
+  letter-spacing: -1px;
+  color: #222222;
+}
+
+.SelfDiagnosisResult-body__content--confirmButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 50px;
+  margin-top: 25px;
+  border-radius: 6px;
+  background-color: #2385ff;
+  color: white;
+}

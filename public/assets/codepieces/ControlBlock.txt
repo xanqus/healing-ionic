@@ -1,0 +1,16 @@
+<ControlBlock
+              socket={socket}
+              name="page8"
+              command="play1"
+              imgURL="../assets/controller/thumnail-01-cat-off.png"
+              imgURLPlaying="../assets/controller/thumnail-01-cat-on.png"
+              blockIndex={blockIndex}
+              setBlockIndex={setBlockIndex}
+              index={0}
+              imgURLList={imgURLList}
+              setImgURLList={setImgURLList}
+              defaultImgURLList={defaultImgURLList}
+              onImgURLList={onImgURLList}
+              test={test}
+              setTest={setTest}
+            />

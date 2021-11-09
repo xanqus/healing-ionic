@@ -24,7 +24,14 @@
 .Header-body__logo--img {
   width: 70px;
   height: 30px;
-  margin-left: 10px;
+  margin-left: 20px;
+  object-fit: contain;
+}
+
+.Header-body__controller--img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
   object-fit: contain;
 }
 

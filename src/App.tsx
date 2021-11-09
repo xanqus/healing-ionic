@@ -15,8 +15,9 @@ import HealingVideos from "./pages/HealingVideos";
 import HistoryManagement from "./pages/HistoryManagement";
 import QR from "./pages/QR";
 import Controller from "./pages/Controller";
-
+import DiagnosisTest from "./pages/DiagnosisTest";
 import NotFound from "./pages/NotFound";
+import SelfDiagnosisResult from "./pages/SelfDiagnosisResult";
 
 //1vh = 12px
 
@@ -81,6 +82,11 @@ const App: React.FC = () => {
             <Route path="/HistoryManagement" component={HistoryManagement} />
             <Route path="/QR" component={QR} />
             <Route path="/Controller" component={Controller} />
+            <Route path="/DiagnosisTest" component={DiagnosisTest} />
+            <Route
+              path="/selfDiagnosisResult"
+              component={SelfDiagnosisResult}
+            />
             <Route component={NotFound} />
           </Switch>
         </main>
