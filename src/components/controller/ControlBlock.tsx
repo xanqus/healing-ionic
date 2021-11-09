@@ -11,6 +11,8 @@ const ControlBlock: any = ({
   index,
   setData,
   tabIndex,
+  setIsPlaying,
+  setCurrentPlaying,
 }: any) => {
   const { imgUrl, id } = datas[index];
 
@@ -31,12 +33,11 @@ const ControlBlock: any = ({
             console.log(id);
             event.preventDefault();
             executeCommand(name, command);
+            setCurrentPlaying(datas[id].title);
             setData(
               datas.map((data: any) => {
-                console.log("did", data.id);
-                console.log(
-                  `../assets/controller/thumnail-${data.id + 1}-on.png`
-                );
+                setIsPlaying(true);
+
                 return data.id === index + tabIndex * 12
                   ? {
                       ...data,

@@ -1,0 +1,20 @@
+.Modal-body__btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 12%;
+}
+
+.Modal-body__btn img {
+  width: 75px;
+  height: 75px;
+}
+
+.Modal-body__message {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 20px;
+  font-size: 1.125rem;
+  color: white;
+}

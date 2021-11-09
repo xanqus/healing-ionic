@@ -85,7 +85,12 @@ const HealingSounds: React.FC = () => {
               2: "../assets/healingSounds/h-sub-soc-1.png",
               3: "../assets/healingSounds/h-sub-soc-1.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_01.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_01.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_01.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_01.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_01.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
@@ -108,7 +113,12 @@ const HealingSounds: React.FC = () => {
               1: "../assets/healingSounds/h-sub-soc-2.png",
               3: "../assets/healingSounds/h-sub-soc-2.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_02.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_02.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_02.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_02.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_02.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
@@ -131,7 +141,12 @@ const HealingSounds: React.FC = () => {
               2: "../assets/healingSounds/h-sub-soc-3.png",
               3: "../assets/healingSounds/h-sub-soc-3.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_03.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_03.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_03.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_03.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_03.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
@@ -154,7 +169,12 @@ const HealingSounds: React.FC = () => {
               2: "../assets/healingSounds/h-sub-soc-4.png",
               3: "../assets/healingSounds/h-sub-soc-4.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_04.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_04.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_04.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_04.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_04.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
@@ -177,7 +197,12 @@ const HealingSounds: React.FC = () => {
               2: "../assets/healingSounds/h-sub-soc-5.png",
               3: "../assets/healingSounds/h-sub-soc-5.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_05.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_05.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_05.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_05.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_05.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
@@ -200,7 +225,12 @@ const HealingSounds: React.FC = () => {
               2: "../assets/healingSounds/h-sub-soc-6.png",
               3: "../assets/healingSounds/h-sub-soc-6.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_06.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_06.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_06.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_06.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_06.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
@@ -223,7 +253,12 @@ const HealingSounds: React.FC = () => {
               2: "../assets/healingSounds/h-sub-soc-7.png",
               3: "../assets/healingSounds/h-sub-soc-7.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_06.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_01.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_01.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_01.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_01.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
@@ -246,7 +281,12 @@ const HealingSounds: React.FC = () => {
               2: "../assets/healingSounds/h-sub-soc-8.png",
               3: "../assets/healingSounds/h-sub-soc-8.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_06.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_02.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_02.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_02.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_02.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}
@@ -269,7 +309,12 @@ const HealingSounds: React.FC = () => {
               2: "../assets/healingSounds/h-sub-soc-9.png",
               3: "../assets/healingSounds/h-sub-soc-9.png",
             }}
-            soundURL={{ 0: "../assets/healingSounds/sounds/fx_1_06.mp3" }}
+            soundURL={{
+              0: "../assets/healingSounds/sounds/fx_1_01.mp3",
+              1: "../assets/healingSounds/sounds/fx_1_03.mp3",
+              2: "../assets/healingSounds/sounds/fx_1_03.mp3",
+              3: "../assets/healingSounds/sounds/fx_1_03.mp3",
+            }}
             audio={audio}
             isPlaying={isPlaying}
             setIsPlaying={setIsPlaying}

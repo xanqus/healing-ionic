@@ -15,7 +15,7 @@ const Tab1: React.FC = () => {
   const defaultData3 = defaultDataSet3;
   const [data3, setData3] = useState(defaultDataSet3);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentPlaying, setCurrentPlaying] = useState(-1);
+  const [currentPlaying, setCurrentPlaying] = useState("");
   const socket = io("ws://15.165.121.230:7770", {
     transports: ["websocket"],
   });
@@ -37,6 +37,11 @@ const Tab1: React.FC = () => {
   });
   return (
     <div className="Tab1-body__background">
+      <div className="Tab1-body__currentPlay">
+        {isPlaying
+          ? `${currentPlaying}이(가) 재생중입니다.`
+          : "현재 재생중인 영상이 없습니다."}
+      </div>
       <Carousel isRTL={false} itemsToShow={1}>
         <div className="Tab1-body__content--background">
           {data1.map((ele, index) => {
@@ -51,6 +56,8 @@ const Tab1: React.FC = () => {
                 setData={setData1}
                 index={index}
                 tabIndex={0}
+                setIsPlaying={setIsPlaying}
+                setCurrentPlaying={setCurrentPlaying}
               />
             );
           })}
@@ -67,6 +74,8 @@ const Tab1: React.FC = () => {
                 setData={setData2}
                 index={index}
                 tabIndex={1}
+                setIsPlaying={setIsPlaying}
+                setCurrentPlaying={setCurrentPlaying}
               />
             );
           })}
@@ -83,6 +92,8 @@ const Tab1: React.FC = () => {
                 setData={setData3}
                 index={index}
                 tabIndex={2}
+                setIsPlaying={setIsPlaying}
+                setCurrentPlaying={setCurrentPlaying}
               />
             );
           })}
@@ -106,6 +117,7 @@ const Tab1: React.FC = () => {
           alt=""
           onClick={() => {
             executeCommand("page8", "before");
+            setIsPlaying(false);
             setData1(
               data1.map((data: any): any => {
                 return {
@@ -130,7 +142,6 @@ const Tab1: React.FC = () => {
           }}
         />
       </div>
-
       {/*<div className="Tab1-body__content--controller-wrapper">
         <div className="Tab1-body__content--controller">
           <div className="Tab1-body__content--controller-topWrapper">

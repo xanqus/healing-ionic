@@ -2,7 +2,7 @@ import "./Controller.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Tab1 from "./../components/controller/Tab1";
+import Tab1 from "../components/controller/Tab1";
 import Tab2 from "./../components/controller/Tab2";
 import io from "socket.io-client";
 import { withRouter } from "react-router-dom";

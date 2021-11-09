@@ -5,7 +5,14 @@ import { Bar, Radar } from "react-chartjs-2";
 
 const HistoryManagement: React.FC = () => {
   const barData = {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels: [
+      "스트레스",
+      "심장건강도",
+      "자율신경건강도",
+      "누적피로도",
+      "신체능력",
+      "자율신경건강도",
+    ],
     datasets: [
       {
         label: "이용 전",
@@ -439,7 +446,20 @@ const HistoryManagement: React.FC = () => {
               width={100}
               height={50}
               options={{
-                maintainAspectRatio: false, // false로 설정 시 사용자 정의 크기에 따라 그래프 크기가 결정됨.
+                maintainAspectRatio: false,
+                scales: {
+                  y: {
+                    ticks: {
+                      font: { size: 10 },
+                    },
+                  },
+                  x: {
+                    ticks: {
+                      font: { size: 10 },
+                      color: "black",
+                    },
+                  },
+                }, // false로 설정 시 사용자 정의 크기에 따라 그래프 크기가 결정됨.
               }}
             />
           </div>

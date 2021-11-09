@@ -1,17 +1,28 @@
 import "./Header.css";
 import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Modal from "./Modal";
+import { useState } from "react";
 
 const Header: React.FC = ({ history }: any) => {
+  const [modalState, setModalState] = useState(false);
+  const openModal = () => {
+    setModalState(true);
+  };
+
+  const closeModal = (event: any) => {
+    event.preventDefault();
+    setModalState(false);
+  };
   return (
     <div className="Header-body__background">
       <div className="Header-body__homeButton">
         <img
           className="Header-body__homeButton--img"
-          src="../assets/header/h-main-home.png"
+          src="../assets/header/h-sub-prev.png"
           alt=""
           onClick={() => {
-            history.push("/main");
+            history.goBack();
           }}
         />
       </div>
@@ -49,9 +60,10 @@ const Header: React.FC = ({ history }: any) => {
             src="../assets/header/h-main-img-00.png"
             alt=""
             onClick={() => {
-              alert("menu");
+              openModal();
             }}
           />
+          <Modal state={modalState} closeModal={closeModal} />
         </div>
       </div>
     </div>

@@ -26,6 +26,7 @@
 .SelfDiagnosisResult-body__content {
   width: 90%;
   height: 225px;
+  padding: 10px;
   background-image: url("../assets/selfDiagnosis/h-sub-2-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -47,7 +48,7 @@
 }
 
 .SelfDiagnosisResult-body__content--content {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   letter-spacing: -1px;
   color: #222222;
 }

@@ -1,13 +1,24 @@
 import LogoutButton from "../components/LogoutButton";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { userLoginState } from "../recoil/user";
 import { withRouter } from "react-router-dom";
 import "./Main.css";
+import Modal from "./../components/Modal";
 
 const Home: React.FC = ({ history }: any) => {
   const [user, setUser] = useRecoilState<any | null>(userLoginState);
   const logout = () => setUser(null);
+  const [modalState, setModalState] = useState(false);
+  const openModal = () => {
+    setModalState(true);
+  };
+
+  const closeModal = (event: any) => {
+    event.preventDefault();
+    setModalState(false);
+  };
   return (
     <div className="main-body__background">
       <div className="main-body__header">
@@ -56,7 +67,7 @@ const Home: React.FC = ({ history }: any) => {
                 src="../assets/header/h-main-img-01.png"
                 alt=""
                 onClick={() => {
-                  alert("qr");
+                  history.push("/QR");
                 }}
               />
             </div>
@@ -66,8 +77,13 @@ const Home: React.FC = ({ history }: any) => {
                 src="../assets/header/h-main-img-00.png"
                 alt=""
                 onClick={() => {
-                  alert("menu");
+                  openModal();
                 }}
+              />
+              <Modal
+                state={modalState}
+                setModalState={setModalState}
+                closeModal={closeModal}
               />
             </div>
           </div>
