@@ -44,3 +44,7 @@
   margin-top: 10px;
   border-radius: 8px;
 }
+
+.DiagnosisTest-body__test--submit:active {
+  opacity: 0.5;
+}

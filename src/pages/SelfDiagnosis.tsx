@@ -71,7 +71,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
 
   return (
     <div className="SelfDiagnosis-body__background">
-      <Header />
+      <Header goHome={true} />
       <div className="SelfDiagnosis-body">
         <div className="SelfDiagnosis-body__diagnosis--graph">
           <div className="SelfDiagnosis-body__diagnosis--graph-title">
@@ -166,6 +166,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
           <div>
             <div>
               <div
+                className="SelfDiagnosis-body__dianosisTestBtn1"
                 onClick={(e) => {
                   history.push("/DiagnosisTest", {
                     test: { ttest: "ttest", test2: "test2" },
@@ -177,6 +178,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                 스트레스
               </div>
               <div
+                className="SelfDiagnosis-body__dianosisTestBtn2"
                 onClick={(e) => {
                   history.push("/DiagnosisTest", {
                     diagnosisTestData: diagnosisTestData[1],
@@ -186,6 +188,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                 우울증
               </div>
               <div
+                className="SelfDiagnosis-body__dianosisTestBtn3"
                 onClick={(e) => {
                   history.push("/DiagnosisTest", {
                     diagnosisTestData: diagnosisTestData[2],
@@ -195,6 +198,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                 불면증
               </div>
               <div
+                className="SelfDiagnosis-body__dianosisTestBtn4"
                 onClick={(e) => {
                   history.push("/DiagnosisTest", {
                     diagnosisTestData: diagnosisTestData[3],
@@ -206,6 +210,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
             </div>
             <div>
               <div
+                className="SelfDiagnosis-body__dianosisTestBtn5"
                 onClick={(e) => {
                   history.push("/DiagnosisTest", {
                     diagnosisTestData: diagnosisTestData[4],
@@ -215,6 +220,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                 뇌 피로도
               </div>
               <div
+                className="SelfDiagnosis-body__dianosisTestBtn6"
                 onClick={(e) => {
                   history.push("/DiagnosisTest", {
                     diagnosisTestData: diagnosisTestData[5],

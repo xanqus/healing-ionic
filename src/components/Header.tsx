@@ -3,8 +3,11 @@ import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Modal from "./Modal";
 import { useState } from "react";
+import { dismissOverlay } from "@ionic/core/dist/types/utils/overlays";
 
-const Header: React.FC = ({ history }: any) => {
+const Header: any = withRouter(({ history, goHome }: any) => {
+  const [style, setStyle] = useState("");
+
   const [modalState, setModalState] = useState(false);
   const openModal = () => {
     setModalState(true);
@@ -22,7 +25,11 @@ const Header: React.FC = ({ history }: any) => {
           src="../assets/header/h-sub-prev.png"
           alt=""
           onClick={() => {
-            history.goBack();
+            if (goHome === true) {
+              history.push("/main");
+            } else {
+              history.goBack();
+            }
           }}
         />
       </div>
@@ -68,6 +75,6 @@ const Header: React.FC = ({ history }: any) => {
       </div>
     </div>
   );
-};
+});
 
-export default withRouter(Header);
+export default Header;

@@ -64,3 +64,6 @@
   background-color: #2385ff;
   color: white;
 }
+.SelfDiagnosisResult-body__content--confirmButton:active {
+  opacity: 0.5;
+}

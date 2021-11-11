@@ -1,7 +1,18 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import SignInModal from "./../components/SIgnInModal";
 
 const Home: React.FC = () => {
+  const [modalState, setModalState] = useState(false);
+  const openModal = () => {
+    setModalState(true);
+  };
+
+  const closeModal = (event: any) => {
+    event.preventDefault();
+    setModalState(false);
+  };
   return (
     <div className="home-body__background">
       <div className="home-body__header">
@@ -17,9 +28,16 @@ const Home: React.FC = () => {
           로그인
         </Link>
 
-        <Link className="home-body__main--join" to="/">
+        <Link
+          onClick={() => {
+            openModal();
+          }}
+          className="home-body__main--join"
+          to="/"
+        >
           회원가입
         </Link>
+        <SignInModal state={modalState} closeModal={closeModal} />
       </div>
     </div>
   );

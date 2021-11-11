@@ -34,6 +34,7 @@ const Controller: React.FC = ({ history }: any) => {
   };
 
   const [currentTab, setCurrentTab] = useState(0);
+
   const menuArr = [
     { name: "힐링콘텐츠", content: "Tab menu ONE" },
     { name: "노출경험용콘텐츠", content: "Tab menu TWO" },

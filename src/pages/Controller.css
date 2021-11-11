@@ -75,9 +75,9 @@
 
 .Controller-body__mainMenu {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 80vw;
-  height: 600px;
+  height: 544px;
   background-color: #feffff;
   box-shadow: 0px 1px 17px 0 rgba(82, 147, 255, 0.3);
   border-radius: 36px;

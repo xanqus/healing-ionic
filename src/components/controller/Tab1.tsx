@@ -16,6 +16,7 @@ const Tab1: React.FC = () => {
   const [data3, setData3] = useState(defaultDataSet3);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentPlaying, setCurrentPlaying] = useState("");
+  const [style, setStyle] = useState("");
   const socket = io("ws://15.165.121.230:7770", {
     transports: ["websocket"],
   });
@@ -106,15 +107,26 @@ const Tab1: React.FC = () => {
           justifyContent: "center",
           width: "100%",
           height: "50px",
-          backgroundColor: "blue",
           borderRadius: "30px",
           overflow: "hidden",
         }}
       >
         <img
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          style={{
+            width: "80%",
+            height: "100%",
+            objectFit: "cover",
+            borderRadius: "30px",
+          }}
           src="../assets/controller/button-back-on.png"
           alt=""
+          className={style}
+          onMouseDown={(e) => {
+            setStyle("clicked");
+          }}
+          onMouseUp={(e) => {
+            setStyle("");
+          }}
           onClick={() => {
             executeCommand("page8", "before");
             setIsPlaying(false);

@@ -273,3 +273,21 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.SelfDiagnosis-body__dianosisTestBtn1:active {
+  opacity: 0.5;
+}
+.SelfDiagnosis-body__dianosisTestBtn2:active {
+  opacity: 0.5;
+}
+.SelfDiagnosis-body__dianosisTestBtn3:active {
+  opacity: 0.5;
+}
+.SelfDiagnosis-body__dianosisTestBtn4:active {
+  opacity: 0.5;
+}
+.SelfDiagnosis-body__dianosisTestBtn5:active {
+  opacity: 0.5;
+}
+.SelfDiagnosis-body__dianosisTestBtn6:active {
+  opacity: 0.5;
+}

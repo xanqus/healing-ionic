@@ -9,8 +9,10 @@ import Modal from "./../components/Modal";
 
 const Home: React.FC = ({ history }: any) => {
   const [user, setUser] = useRecoilState<any | null>(userLoginState);
+
   const logout = () => setUser(null);
   const [modalState, setModalState] = useState(false);
+  const [style, setStyle] = useState("");
   const openModal = () => {
     setModalState(true);
   };
@@ -25,10 +27,11 @@ const Home: React.FC = ({ history }: any) => {
         <div className="main-header__wrapper">
           <div className="main-header__homeButton">
             <img
+              className="main-header__homeButton-img"
               style={{ width: "20px", height: "20px", marginLeft: "10px" }}
               src="../assets/header/h-main-home.png"
               alt=""
-              onClick={() => {
+              onClick={(e) => {
                 history.push("/main");
               }}
             />
@@ -54,6 +57,7 @@ const Home: React.FC = ({ history }: any) => {
                   marginRight: "10px",
                   objectFit: "contain",
                 }}
+                className="main-header__controlButton-img"
                 src="../assets/header/h-main-control.png"
                 alt=""
                 onClick={() => {
@@ -63,6 +67,7 @@ const Home: React.FC = ({ history }: any) => {
             </div>
             <div className="main-header__QRButton">
               <img
+                className="main-header__QRButton-img"
                 style={{ width: "20px", height: "20px", marginRight: "10px" }}
                 src="../assets/header/h-main-img-01.png"
                 alt=""
@@ -73,6 +78,7 @@ const Home: React.FC = ({ history }: any) => {
             </div>
             <div className="main-header__menuButton">
               <img
+                className="main-header__menuButton-img"
                 style={{ width: "20px", height: "20px", marginRight: "10px" }}
                 src="../assets/header/h-main-img-00.png"
                 alt=""
@@ -228,6 +234,7 @@ const Home: React.FC = ({ history }: any) => {
               }}
               src="../assets/main/h-main-menu-0.png"
               alt=""
+              className="main-body__nav--1"
               onClick={() => {
                 history.push("/healingSounds");
               }}
@@ -235,6 +242,7 @@ const Home: React.FC = ({ history }: any) => {
           </div>
           <div className="main-body__nav--2">
             <img
+              className="main-body__nav--2"
               style={{
                 width: "45vw",
                 height: "130px",
@@ -261,6 +269,7 @@ const Home: React.FC = ({ history }: any) => {
         >
           <div className="main-body__nav--3">
             <img
+              className="main-body__nav--3"
               style={{
                 width: "45vw",
                 height: "130px",
@@ -278,6 +287,7 @@ const Home: React.FC = ({ history }: any) => {
           </div>
           <div className="main-body__nav--4">
             <img
+              className="main-body__nav--4"
               style={{
                 width: "45vw",
                 height: "130px",

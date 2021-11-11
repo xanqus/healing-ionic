@@ -33,6 +33,10 @@
   height: 20px;
 }
 
+.main-header__homeButton-img:active {
+  opacity: 0.5;
+}
+
 .main-header__logo {
   width: 70px;
   height: 30px;
@@ -230,4 +234,27 @@
   font-weight: bold;
   font-size: 0.175rem;
   fill: #32376f;
+}
+
+.main-header__controlButton-img:active {
+  opacity: 0.5;
+}
+.main-header__QRButton-img:active {
+  opacity: 0.5;
+}
+.main-header__menuButton-img:active {
+  opacity: 0.5;
+}
+.main-body__nav--1:active {
+  opacity: 0.5;
+}
+
+.main-body__nav--2:active {
+  opacity: 0.5;
+}
+.main-body__nav--3:active {
+  opacity: 0.5;
+}
+.main-body__nav--4:active {
+  opacity: 0.5;
 }

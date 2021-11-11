@@ -15,7 +15,7 @@ const ControlBlock: any = ({
   setCurrentPlaying,
 }: any) => {
   const { imgUrl, id } = datas[index];
-
+  console.log("id", id);
   const executeCommand = (name: any, command: any) => {
     socket.emit("executeCommand", { name, command }, (data: any) => {
       console.log(data);
@@ -33,7 +33,7 @@ const ControlBlock: any = ({
             console.log(id);
             event.preventDefault();
             executeCommand(name, command);
-            setCurrentPlaying(datas[id].title);
+            setCurrentPlaying(datas[index].title);
             setData(
               datas.map((data: any) => {
                 setIsPlaying(true);

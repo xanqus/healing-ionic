@@ -12,6 +12,7 @@ const HealingVideoPlayer: any = ({ location }: any) => {
       <Header />
       <div className="HealingVideoPlayer-body__videoWrapper">
         <video
+          autoPlay
           controls
           className="HealingVideoPlayer-body__video"
           src={videoLink}

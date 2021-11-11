@@ -3,19 +3,22 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  min-height: 50px;
   height: 50px;
   background-image: url("../assets/header/h-sub-top.png");
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0 0 30px 30px;
-  overflow: hidden;
 }
 .Header-body__homeButton--img {
   width: 20px;
   height: 20px;
   margin-left: 10px;
   object-fit: contain;
+}
+.Header-body__homeButton--img:active {
+  opacity: 0.5;
 }
 
 .Header-body__logo {
@@ -52,4 +55,18 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.clicked {
+  opacity: 0.5;
+}
+
+.Header-body__controller--img:active {
+  opacity: 0.5;
+}
+.Header-body__QRButton--img:active {
+  opacity: 0.5;
+}
+.Header-body__menuButton:active {
+  opacity: 0.5;
 }
