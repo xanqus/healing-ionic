@@ -8,7 +8,6 @@ const VideoBlock: any = ({
   videoLink,
   index,
 }: any) => {
-  console.log(videoLink[currentIndex]);
   return (
     <div className="VideoBlock-body__background">
       <Link
@@ -16,7 +15,7 @@ const VideoBlock: any = ({
         to={{
           pathname: "/healingVideoPlayer",
           state: {
-            videoLink: videoLink[currentIndex],
+            videoLink: videoLink[index],
           },
         }}
       >

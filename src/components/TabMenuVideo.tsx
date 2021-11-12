@@ -75,6 +75,59 @@ const TabMenuVideo: any = ({ children, setCurrentIndex }: any) => {
           {children[6]}
           {children[7]}
         </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[8]}
+          {children[9]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[10]}
+          {children[11]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[12]}
+          {children[13]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[14]}
+          {children[15]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[16]}
+          {children[17]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[18]}
+          {children[19]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[20]}
+          {children[21]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[22]}
+          {children[23]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[24]}
+          {children[25]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[26]}
+          {children[27]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[28]}
+          {children[29]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[30]}
+          {children[31]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[32]}
+          {children[33]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">{children[34]}</div>
       </div>
     </div>
   );

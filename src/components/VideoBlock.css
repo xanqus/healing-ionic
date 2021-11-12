@@ -5,6 +5,7 @@
   justify-content: center;
   width: calc(100% / 2);
   height: 150px;
+  border: 1px solid aqua;
   box-sizing: border-box;
 }
 

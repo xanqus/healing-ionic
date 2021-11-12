@@ -52,8 +52,6 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 150px;
-  border: 1px solid black;
 }
 
 .TabMenuVideo-body__search {
@@ -71,6 +69,7 @@
   width: 21vw;
   height: 35px;
 }
+
 .TabMenuVideo-body__search--category-select {
   width: 100%;
   height: 100%;
