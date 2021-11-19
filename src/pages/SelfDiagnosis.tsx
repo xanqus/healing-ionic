@@ -3,52 +3,9 @@ import { useState } from "react";
 import { withRouter, Link } from "react-router-dom";
 import Header from "../components/Header";
 import { Radar } from "react-chartjs-2";
+import { diagnosisTestData } from "./../assets/dataset/SelfDiagnosisData";
 
 const SelfDiagnosis: React.FC = ({ history }: any) => {
-  const diagnosisTestData = [
-    {
-      testName: "스트레스",
-      questions: [
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.",
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.2",
-      ],
-    },
-    {
-      testName: "우울증",
-      questions: [
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.",
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.2",
-      ],
-    },
-    {
-      testName: "불면증",
-      questions: [
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.",
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.2",
-      ],
-    },
-    {
-      testName: "피로도",
-      questions: [
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.",
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.2",
-      ],
-    },
-    {
-      testName: "뇌 피로도",
-      questions: [
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.",
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.2",
-      ],
-    },
-    {
-      testName: "조울증",
-      questions: [
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.",
-        "그 사건을 떠오르게 하는 어떤 자극에도 그때의 감정이 되살아났다.2",
-      ],
-    },
-  ];
   const data = {
     labels: [
       "자율신경 균형도",
@@ -175,7 +132,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                   });
                 }}
               >
-                스트레스
+                PTSD
               </div>
               <div
                 className="SelfDiagnosis-body__dianosisTestBtn2"
@@ -195,7 +152,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                   });
                 }}
               >
-                불면증
+                수면장애
               </div>
               <div
                 className="SelfDiagnosis-body__dianosisTestBtn4"
@@ -205,7 +162,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                   });
                 }}
               >
-                피로도
+                자살
               </div>
             </div>
             <div>
@@ -217,7 +174,16 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                   });
                 }}
               >
-                뇌 피로도
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                  }}
+                >
+                  물질 남용 및 중독
+                </div>
               </div>
               <div
                 className="SelfDiagnosis-body__dianosisTestBtn6"
@@ -227,7 +193,7 @@ const SelfDiagnosis: React.FC = ({ history }: any) => {
                   });
                 }}
               >
-                조울증
+                불안
               </div>
               <div></div>
               <div></div>

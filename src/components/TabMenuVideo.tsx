@@ -6,10 +6,11 @@ const TabMenuVideo: any = ({ children, setCurrentIndex }: any) => {
   const [currentTab, setCurrentTab] = useState(0);
 
   const menuArr = [
-    { name: "수면 힐링", content: "Tab menu ONE" },
-    { name: "감정 힐링", content: "Tab menu TWO" },
-    { name: "피로감 해소", content: "Tab menu THREE" },
-    { name: "스트레스 해소", content: "Tab menu FOUR" },
+    { name: "동물", content: "Tab menu ONE" },
+    { name: "일상", content: "Tab menu TWO" },
+    { name: "음식", content: "Tab menu THREE" },
+    { name: "자연", content: "Tab menu FOUR" },
+    { name: "파티클", content: "Tab menu FOUR" },
   ];
 
   const selectMenuHandler = (index: any) => {
@@ -127,7 +128,18 @@ const TabMenuVideo: any = ({ children, setCurrentIndex }: any) => {
           {children[32]}
           {children[33]}
         </div>
-        <div className="TabMenuVideo-block-wrapper">{children[34]}</div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[34]}
+          {children[35]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[36]}
+          {children[37]}
+        </div>
+        <div className="TabMenuVideo-block-wrapper">
+          {children[38]}
+          {children[39]}
+        </div>
       </div>
     </div>
   );

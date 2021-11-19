@@ -13,15 +13,16 @@
 
 .AudioPlayer-body__background--timeline {
   display: flex;
+  position:relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
   height: 100%;
   color: white;
-
   /*background-color: antiquewhite;*/
 }
+
 
 .AudioPlayer-body--timeline {
   width: calc(100% - 30px);
@@ -36,6 +37,7 @@
   flex-direction: row;
   width: calc(100% - 30px);
   height: 20px;
+  
   /*background-color: white;*/
 }
 
@@ -62,7 +64,6 @@
   justify-content: center;
   width: 30%;
   height: 100%;
-  background-color: black;
 }
 
 .AudioPlayer-body__background--buttons-prev {

@@ -16,8 +16,30 @@ const DiagnosisTest: React.FC = ({ location, history }: any) => {
   } = location;
 
   const [score, setScore] = useState<any>({
-    score0: 0,
-    score1: 0,
+    score0: -1,
+    score1: -1,
+    score2: -1,
+    score3: -1,
+    score4: -1,
+    score5: -1,
+    score6: -1,
+    score7: -1,
+    score8: -1,
+    score9: -1,
+    score10: -1,
+    score11: -1,
+    score12: -1,
+    score13: -1,
+    score14: -1,
+    score15: -1,
+    score16: -1,
+    score17: -1,
+    score18: -1,
+    score19: -1,
+    score20: -1,
+    score21: -1,
+    score22: -1,
+    score23: -1,
   });
 
   const getTotalScore = () => {
@@ -31,25 +53,37 @@ const DiagnosisTest: React.FC = ({ location, history }: any) => {
   return (
     <div className="DiagnosisTest-body__background">
       <Header />
+      {/*getTotalScore()*/}
       <div className="DiagnosisTest-body__title">
         <img src="../assets/selfDiagnosis/h-sub-icon-05.png" alt="" />
         {testName} 자가진단
       </div>
       <div className="DiagnosisTest-body__content--background">
         {questions.map((ele: any, index: any) => {
-          return (
-            <QuestionBlock
-              scoreId={index}
-              key={index}
-              question={questions[index]}
-              score={score}
-              setScore={setScore}
-            />
-          );
+          if (ele === null) {
+            return <div key={index}>hi</div>;
+          } else {
+            return (
+              <QuestionBlock
+                scoreId={index}
+                key={index}
+                question={questions[index]}
+                score={score}
+                setScore={setScore}
+              />
+            );
+          }
         })}
       </div>
       <div
         onClick={() => {
+          for (let i = 0; i < questions.length; i++) {
+            if (score[`score${i}`] === -1) {
+              alert("빈칸을 다 채워주세요.");
+              return false;
+            }
+          }
+          ////////////////////////////////////////////////
           history.push("/selfDiagnosisResult", {
             totalScore: getTotalScore(),
             testName,

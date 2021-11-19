@@ -54,6 +54,41 @@ const TabMenu: any = ({ children, setCurrentIndex }: any) => {
           {children[7]}
           {children[8]}
         </div>
+        <div className="TabMenu-block-wrapper">
+          {children[9]}
+          {children[10]}
+          {children[11]}
+        </div>
+        <div className="TabMenu-block-wrapper">
+          {children[12]}
+          {children[13]}
+          {children[14]}
+        </div>
+        <div className="TabMenu-block-wrapper">
+          {children[15]}
+          {children[16]}
+          {children[17]}
+        </div>
+        <div className="TabMenu-block-wrapper">
+          {children[18]}
+          {children[19]}
+          {children[20]}
+        </div>
+        <div className="TabMenu-block-wrapper">
+          {children[21]}
+          {children[22]}
+          {children[23]}
+        </div>
+        <div className="TabMenu-block-wrapper">
+          {children[24]}
+          {children[25]}
+          {children[26]}
+        </div>
+        <div className="TabMenu-block-wrapper">
+          {children[27]}
+          {children[28]}
+          {children[29]}
+        </div>
       </div>
     </div>
   );

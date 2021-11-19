@@ -6,17 +6,23 @@
 }
 .QuestionBlock-body__question {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  height: 25px;
+
   font-size: 13px;
   letter-spacing: -2px;
+  margin-bottom: 5px;
+}
+.QuestionBlock-body__question > div:nth-child(1) {
+  width: 10px;
+  height: 100%;
 }
 
-.QuestionBlock-body__question > img {
+.QuestionBlock-body__question > div > img {
   width: 8px;
   height: 8px;
   margin-right: 2px;
+  margin-bottom: 1.5px;
 }
 
 .QuestionBlock-body__scoreBlock--cover {

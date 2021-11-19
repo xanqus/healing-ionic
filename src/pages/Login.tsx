@@ -17,9 +17,9 @@ function Login({ authenticated, login, location }: any) {
   };
 
   const { from } = location.state || { from: { pathname: "/" } };
-  console.log("from", from);
-  console.log("location.state", location.state);
-  console.log("authenticated", authenticated);
+  //console.log("from", from);
+  //console.log("location.state", location.state);
+  //console.log("authenticated", authenticated);
   if (authenticated) return <Redirect to={"/main"} />;
 
   return (

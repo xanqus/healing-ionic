@@ -19,6 +19,7 @@ const ScoreBlock: any = ({
         checkVal(e);
       }}
       id={id}
+      required
     ></input>
   );
 };

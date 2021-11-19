@@ -21,493 +21,223 @@ const HealingVideos: React.FC = () => {
         <TabMenuVideo setCurrentIndex={setCurrentIndex}>
           <VideoBlock
             currentIndex={currentIndex}
-            content="낮잠자는 고양이"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-1.png",
-              1: "../assets/healingVideos/thumb-1.png",
-              2: "../assets/healingVideos/thumb-1.png",
-              3: "../assets/healingVideos/thumb-1.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/aa.mp4",
-            }}
+            content={[
+              "낮잠자는 고양이",
+              "맥주공장",
+              "스테이크",
+              "황혼의 산 중턱",
+              "섞이는 물감",
+            ]}
+            imgURL={[
+              "../assets/healingVideos/thumb-1.png",
+              "../assets/healingVideos/thumb-11.png",
+              "../assets/healingVideos/thumb-16.png",
+              "../assets/healingVideos/thumb-26.png",
+              "../assets/healingVideos/thumb-36.png",
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-1(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-11(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-16(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-26(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-36(2k).mp4",
+            ]}
             index={0}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="앉아있는 개"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-2.png",
-              1: "../assets/healingVideos/thumb-2.png",
-              2: "../assets/healingVideos/thumb-2.png",
-              3: "../assets/healingVideos/thumb-2.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/bb.mp4",
-            }}
+            content={[
+              "앉아있는 개",
+              "비가오는 도시",
+              "팬 스테이크",
+              "안개 낀 숲속",
+              "푸른 불빛의 호수",
+            ]}
+            imgURL={[
+              "../assets/healingVideos/thumb-2.png",
+              "../assets/healingVideos/thumb-12.png",
+              "../assets/healingVideos/thumb-17.png",
+              "../assets/healingVideos/thumb-27.png",
+              "../assets/healingVideos/thumb-37.png",
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-2(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-12(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-17(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-27(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-37(2k).mp4",
+            ]}
             index={1}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="늑대"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-3.png",
-              1: "../assets/healingVideos/thumb-3.png",
-              2: "../assets/healingVideos/thumb-3.png",
-              3: "../assets/healingVideos/thumb-3.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
+            content={[
+              "늑대",
+              "목재 조형",
+              "햄버거 패티",
+              "한적한 해변",
+              "캠프 파이어",
+            ]}
+            imgURL={[
+              "../assets/healingVideos/thumb-3.png",
+              "../assets/healingVideos/thumb-13.png",
+              "../assets/healingVideos/thumb-18.png",
+              "../assets/healingVideos/thumb-28.png",
+              "../assets/healingVideos/thumb-38.png",
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-3(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-13(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-18(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-28(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-38(2k).mp4",
+            ]}
             index={2}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="청둥오리"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-4.png",
-              1: "../assets/healingVideos/thumb-4.png",
-              2: "../assets/healingVideos/thumb-4.png",
-              3: "../assets/healingVideos/thumb-4.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
+            content={[
+              "청둥오리",
+              "시계 태엽",
+              "감자튀김",
+              "숲 속의 폭포",
+              "깊은 바다의 고래",
+            ]}
+            imgURL={[
+              "../assets/healingVideos/thumb-4.png",
+              "../assets/healingVideos/thumb-14.png",
+              "../assets/healingVideos/thumb-19.png",
+              "../assets/healingVideos/thumb-29.png",
+              "../assets/healingVideos/thumb-39.png",
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-4(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-14(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-19(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-29(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-39(2k).mp4",
+            ]}
             index={3}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="물가의 새"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-5.png",
-              1: "../assets/healingVideos/thumb-5.png",
-              2: "../assets/healingVideos/thumb-5.png",
-              3: "../assets/healingVideos/thumb-5.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
+            content={[
+              "물가의 새",
+              "가죽 공예",
+              "피자 만들기",
+              "초봄의 냇가",
+              "달빛아래 춤추는 고래",
+            ]}
+            imgURL={[
+              "../assets/healingVideos/thumb-5.png",
+              "../assets/healingVideos/thumb-15.png",
+              "../assets/healingVideos/thumb-20.png",
+              "../assets/healingVideos/thumb-30.png",
+              "../assets/healingVideos/thumb-40.png",
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-5(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-15(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-20(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-30(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-40(2k).mp4",
+            ]}
             index={4}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="바다거북이"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-6.png",
-              1: "../assets/healingVideos/thumb-6.png",
-              2: "../assets/healingVideos/thumb-6.png",
-              3: "../assets/healingVideos/thumb-6.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
+            content={["바다거북이", null, "원두 로스팅", "보라색 꽃", null]}
+            imgURL={[
+              "../assets/healingVideos/thumb-6.png",
+              null,
+              "../assets/healingVideos/thumb-21.png",
+              "../assets/healingVideos/thumb-31.png",
+              null,
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-6(2k).mp4",
+              null,
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-21(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-31(2k).mp4",
+              null,
+            ]}
             index={5}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="아쿠아리움"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-7.png",
-              1: "../assets/healingVideos/thumb-7.png",
-              2: "../assets/healingVideos/thumb-7.png",
-              3: "../assets/healingVideos/thumb-7.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
+            content={["아쿠아리움", null, "커피 추출", "분홍색 꽃", null]}
+            imgURL={[
+              "../assets/healingVideos/thumb-7.png",
+              null,
+              "../assets/healingVideos/thumb-22.png",
+              "../assets/healingVideos/thumb-32.png",
+              null,
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-7(2k).mp4",
+              null,
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-22(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-32(2k).mp4",
+              null,
+            ]}
             index={6}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="갯벌의 게"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-8.png",
-              1: "../assets/healingVideos/thumb-8.png",
-              2: "../assets/healingVideos/thumb-8.png",
-              3: "../assets/healingVideos/thumb-8.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
+            content={["갯벌의 게", null, "원두 커피", "참나리", null]}
+            imgURL={[
+              "../assets/healingVideos/thumb-8.png",
+              null,
+              "../assets/healingVideos/thumb-23.png",
+              "../assets/healingVideos/thumb-33.png",
+              null,
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-8(2k).mp4",
+              null,
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-23(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-33(2k).mp4",
+              null,
+            ]}
             index={7}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="쥐가오리"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-9.png",
-              1: "../assets/healingVideos/thumb-9.png",
-              2: "../assets/healingVideos/thumb-9.png",
-              3: "../assets/healingVideos/thumb-9.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
+            content={["쥐가오리", null, "라떼 아트", "벼가 익는 밭", null]}
+            imgURL={[
+              "../assets/healingVideos/thumb-9.png",
+              null,
+              "../assets/healingVideos/thumb-24.png",
+              "../assets/healingVideos/thumb-34.png",
+              null,
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-9(2k).mp4",
+              null,
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-24(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-34(2k).mp4",
+              null,
+            ]}
             index={8}
           />
           <VideoBlock
             currentIndex={currentIndex}
-            content="강에 사는 물고기"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-10.png",
-              1: "../assets/healingVideos/thumb-10.png",
-              2: "../assets/healingVideos/thumb-10.png",
-              3: "../assets/healingVideos/thumb-10.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
+            content={["강에 사는 물고기", null, "티타임", "강과 산", null]}
+            imgURL={[
+              "../assets/healingVideos/thumb-10.png",
+              null,
+              "../assets/healingVideos/thumb-25.png",
+              "../assets/healingVideos/thumb-35.png",
+              null,
+            ]}
+            videoLink={[
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-10(2k).mp4",
+              null,
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-25(2k).mp4",
+              "https://healing-bucket.s3.ap-northeast-2.amazonaws.com/healingVideos/video-35(2k).mp4",
+              null,
+            ]}
             index={9}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="맥주공장"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-11.png",
-              1: "../assets/healingVideos/thumb-11.png",
-              2: "../assets/healingVideos/thumb-11.png",
-              3: "../assets/healingVideos/thumb-11.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={10}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="비가 오는 도시"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-12.png",
-              1: "../assets/healingVideos/thumb-12.png",
-              2: "../assets/healingVideos/thumb-12.png",
-              3: "../assets/healingVideos/thumb-12.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={11}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="스테이크"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-13.png",
-              1: "../assets/healingVideos/thumb-13.png",
-              2: "../assets/healingVideos/thumb-13.png",
-              3: "../assets/healingVideos/thumb-13.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={12}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="팬 스테이크"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-14.png",
-              1: "../assets/healingVideos/thumb-14.png",
-              2: "../assets/healingVideos/thumb-14.png",
-              3: "../assets/healingVideos/thumb-14.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={13}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="햄버거 패티"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-15.png",
-              1: "../assets/healingVideos/thumb-15.png",
-              2: "../assets/healingVideos/thumb-15.png",
-              3: "../assets/healingVideos/thumb-15.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={14}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="감자튀김"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-16.png",
-              1: "../assets/healingVideos/thumb-16.png",
-              2: "../assets/healingVideos/thumb-16.png",
-              3: "../assets/healingVideos/thumb-16.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={15}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="피자 만들기"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-17.png",
-              1: "../assets/healingVideos/thumb-17.png",
-              2: "../assets/healingVideos/thumb-17.png",
-              3: "../assets/healingVideos/thumb-17.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={16}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="원두 로스팅"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-18.png",
-              1: "../assets/healingVideos/thumb-18.png",
-              2: "../assets/healingVideos/thumb-18.png",
-              3: "../assets/healingVideos/thumb-18.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={17}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="커피 추출"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-19.png",
-              1: "../assets/healingVideos/thumb-19.png",
-              2: "../assets/healingVideos/thumb-19.png",
-              3: "../assets/healingVideos/thumb-19.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={18}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="원두 커피"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-20.png",
-              1: "../assets/healingVideos/thumb-20.png",
-              2: "../assets/healingVideos/thumb-20.png",
-              3: "../assets/healingVideos/thumb-20.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={19}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="라떼 아트"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-21.png",
-              1: "../assets/healingVideos/thumb-21.png",
-              2: "../assets/healingVideos/thumb-21.png",
-              3: "../assets/healingVideos/thumb-21.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={20}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="티타임"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-22.png",
-              1: "../assets/healingVideos/thumb-22.png",
-              2: "../assets/healingVideos/thumb-22.png",
-              3: "../assets/healingVideos/thumb-22.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={21}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="황혼의 산 중턱"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-23.png",
-              1: "../assets/healingVideos/thumb-23.png",
-              2: "../assets/healingVideos/thumb-23.png",
-              3: "../assets/healingVideos/thumb-23.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={22}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="안개 낀 숲속"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-24.png",
-              1: "../assets/healingVideos/thumb-24.png",
-              2: "../assets/healingVideos/thumb-24.png",
-              3: "../assets/healingVideos/thumb-24.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={23}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="한적한 해변"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-25.png",
-              1: "../assets/healingVideos/thumb-25.png",
-              2: "../assets/healingVideos/thumb-25.png",
-              3: "../assets/healingVideos/thumb-25.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={24}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="숲속의 폭포"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-26.png",
-              1: "../assets/healingVideos/thumb-26.png",
-              2: "../assets/healingVideos/thumb-26.png",
-              3: "../assets/healingVideos/thumb-26.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={25}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="초봄의 냇가"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-27.png",
-              1: "../assets/healingVideos/thumb-27.png",
-              2: "../assets/healingVideos/thumb-27.png",
-              3: "../assets/healingVideos/thumb-27.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={26}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="보라색 꽃"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-28.png",
-              1: "../assets/healingVideos/thumb-28.png",
-              2: "../assets/healingVideos/thumb-28.png",
-              3: "../assets/healingVideos/thumb-28.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={27}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="분홍색 꽃"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-29.png",
-              1: "../assets/healingVideos/thumb-29.png",
-              2: "../assets/healingVideos/thumb-29.png",
-              3: "../assets/healingVideos/thumb-29.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={28}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="참나리"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-30.png",
-              1: "../assets/healingVideos/thumb-30.png",
-              2: "../assets/healingVideos/thumb-30.png",
-              3: "../assets/healingVideos/thumb-30.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={29}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="섞이는 물감"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-31.png",
-              1: "../assets/healingVideos/thumb-31.png",
-              2: "../assets/healingVideos/thumb-31.png",
-              3: "../assets/healingVideos/thumb-31.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={30}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="푸른 불빛의 호수"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-32.png",
-              1: "../assets/healingVideos/thumb-32.png",
-              2: "../assets/healingVideos/thumb-32.png",
-              3: "../assets/healingVideos/thumb-32.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={31}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="캠프파이어"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-33.png",
-              1: "../assets/healingVideos/thumb-33.png",
-              2: "../assets/healingVideos/thumb-33.png",
-              3: "../assets/healingVideos/thumb-33.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={32}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="깊은 바다의 고래"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-34.png",
-              1: "../assets/healingVideos/thumb-34.png",
-              2: "../assets/healingVideos/thumb-34.png",
-              3: "../assets/healingVideos/thumb-34.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={33}
-          />
-          <VideoBlock
-            currentIndex={currentIndex}
-            content="달빛아래 춤추는 고래"
-            imgURL={{
-              0: "../assets/healingVideos/thumb-35.png",
-              1: "../assets/healingVideos/thumb-35.png",
-              2: "../assets/healingVideos/thumb-35.png",
-              3: "../assets/healingVideos/thumb-35.png",
-            }}
-            videoLink={{
-              0: "https://wetube-xanqus.s3-ap-northeast-1.amazonaws.com/video/cc.mp4",
-            }}
-            index={34}
           />
         </TabMenuVideo>
       </div>

@@ -5,7 +5,12 @@ import ControlBlock from "./ControlBlock";
 import Carousel from "react-elastic-carousel";
 import io from "socket.io-client";
 
-import { defaultDataSet1, defaultDataSet2, defaultDataSet3 } from "./dataset";
+import {
+  defaultDataSet1,
+  defaultDataSet2,
+  defaultDataSet3,
+  defaultDataSet4,
+} from "./dataset";
 
 const Tab1: React.FC = () => {
   const defaultData1 = defaultDataSet1;
@@ -14,6 +19,8 @@ const Tab1: React.FC = () => {
   const [data2, setData2] = useState(defaultDataSet2);
   const defaultData3 = defaultDataSet3;
   const [data3, setData3] = useState(defaultDataSet3);
+  const defaultData4 = defaultDataSet4;
+  const [data4, setData4] = useState(defaultDataSet4);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentPlaying, setCurrentPlaying] = useState("");
   const [style, setStyle] = useState("");
@@ -99,6 +106,24 @@ const Tab1: React.FC = () => {
             );
           })}
         </div>
+        <div className="Tab1-body__content--background">
+          {data4.map((ele, index) => {
+            return (
+              <ControlBlock
+                key={index}
+                socket={socket}
+                name="page8"
+                command={`play${ele.id + 1}`}
+                datas={data4}
+                setData={setData4}
+                index={index}
+                tabIndex={3}
+                setIsPlaying={setIsPlaying}
+                setCurrentPlaying={setCurrentPlaying}
+              />
+            );
+          })}
+        </div>
       </Carousel>
       <div
         style={{
@@ -148,6 +173,13 @@ const Tab1: React.FC = () => {
               data1.map((data: any): any => {
                 return {
                   ...defaultData3[data.id],
+                };
+              })
+            );
+            setData4(
+              data1.map((data: any): any => {
+                return {
+                  ...defaultData4[data.id],
                 };
               })
             );

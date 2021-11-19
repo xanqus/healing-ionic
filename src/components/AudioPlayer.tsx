@@ -1,5 +1,5 @@
 import "./AudioPlayer.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
 
@@ -9,7 +9,16 @@ const AudioPlayer: any = ({
   audio,
   currentTime,
   durationTime,
+  setCurrentTime,
 }: any) => {
+  const [timeline, setTimeLine] = useState(0);
+
+  useEffect(() => {
+    console.log(currentTime);
+    isNaN(durationTime)
+      ? console.log("test")
+      : setTimeLine((currentTime / durationTime) * 100);
+  }, [currentTime]);
   const start = () => {
     audio.play();
   };
@@ -21,8 +30,7 @@ const AudioPlayer: any = ({
   function formatDuration(duration: any): any {
     return moment.duration(duration, "seconds");
   }
-  console.log(formatDuration(100)._data.minutes);
-  console.log(formatDuration(100)._data.seconds);
+
   return (
     <div className="AudioPlayer-body__background">
       <div className="AudioPlayer-body__background--wave"></div>
@@ -30,16 +38,27 @@ const AudioPlayer: any = ({
         <div
           style={{
             display: "flex",
+            position: "relative",
             alignItems: "center",
             justifyContent: "flex-start",
             color: "white",
-            width: "80%",
+            width: `80%`,
             height: "30px",
           }}
         >
           조용한 시계소리
         </div>
-        <div className="AudioPlayer-body--timeline"></div>
+
+        <input
+          onChange={(e) => {
+            audio.currentTime = (+e.target.value * durationTime) / 100;
+            setCurrentTime((+e.target.value * durationTime) / 100);
+            setTimeLine(+e.target.value);
+          }}
+          value={isNaN(timeline) ? 0 : timeline}
+          type="range"
+          className="AudioPlayer-body--timeline"
+        ></input>
         <div className="AudioPlayer-body--timeline--time-wrapper">
           <div className="AudioPlayer-body--timeline--time-currentTime">
             {formatDuration(currentTime)._data.minutes < 10

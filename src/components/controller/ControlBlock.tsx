@@ -16,6 +16,7 @@ const ControlBlock: any = ({
 }: any) => {
   const { imgUrl, id } = datas[index];
   console.log("id", id);
+  console.log("imgUrl", imgUrl);
   const executeCommand = (name: any, command: any) => {
     socket.emit("executeCommand", { name, command }, (data: any) => {
       console.log(data);
@@ -45,6 +46,8 @@ const ControlBlock: any = ({
                         data.id + 1
                       }-on.png`,
                     }
+                  : imgUrl === null
+                  ? { ...data, imgUrl: null }
                   : {
                       ...data,
                       imgUrl: `../assets/controller/thumnail-${

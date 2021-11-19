@@ -10,12 +10,14 @@ const HealingVideoPlayer: any = ({ location }: any) => {
     <div className="HealingVideoPlayer-body__background">
       <Header />
       <div className="HealingVideoPlayer-body__videoWrapper">
-        <video
-          autoPlay
-          controls
-          className="HealingVideoPlayer-body__video"
+        {/*  eslint-disable-next-line jsx-a11y/iframe-has-title*/}
+        <iframe
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          width="100%"
+          height="100%"
           src={videoLink}
-        ></video>
+        ></iframe>
       </div>
     </div>
   );
