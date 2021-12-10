@@ -1,116 +1,100 @@
 .Controller-body__background {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  --background: none;
-  background-image: url("../assets/controller/img-bg-02.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: flex-start;
-  align-items: center;
-}
-.Controller-body__header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  font-size: 1.5rem;
-  color: white;
-  width: 100vw;
-  height: 100px;
-  --background: none;
-  background-image: url("../assets/controller/img-bg-01.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0 0 30px 30px;
-  overflow: hidden;
-}
-
-.Controller-body__header > div {
-  display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(100% / 3);
-  height: 100%;
-  box-sizing: border-box;
-
-  padding-bottom: 5px;
-}
-
-.Controller-body__header > div:nth-child(1) {
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-left: 10px;
-  padding-top: 13px;
-}
-
-.Controller-body__header > div:nth-child(1) > img {
-  width: 20px;
-  height: 20px;
-}
-
-.Controller-body__menu {
-  display: flex;
-  flex-direction: row;
-
-  width: 80vw;
-  height: 60px;
-  transform: translateY(-50%);
-  border-radius: 30px;
-  background-color: white;
-  box-shadow: 0px 1px 17px 0 rgba(82, 147, 255, 0.3);
-  padding: 15px;
-}
-
-.Controller-body__menu--item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 100%;
-  font-size: 0.9rem;
-  color: #328fb2;
-}
-
-.Controller-body__mainMenu {
-  display: flex;
-  align-items: flex-start;
-  width: 80vw;
-  height: 544px;
-  background-color: #feffff;
-  box-shadow: 0px 1px 17px 0 rgba(82, 147, 255, 0.3);
-  border-radius: 36px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  box-sizing: border-box;
-}
-
-.Controller-body__menu--item-focused {
-  background-color: #328fb2;
-  border-radius: 25px;
-  color: white;
-}
-
-.Controller-body__header-test {
-  margin-top: 0px;
   width: 100%;
-  height: 120px;
-  background-color: blue;
-  z-index: 0;
+  height: 100vh;
+  background-image: url("../assets/controller/hrc-img-01.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.Controller-body__header-test2 {
-  width: 80%;
-  height: 50px;
-  background-color: black;
-  z-index: 1;
-  transform: translateY(-50%);
+.Controller-main__1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  height: 25%;
 }
 
-.Controller-body__header-test3 {
-  width: 80%;
-  height: 200px;
-  margin-top: -15px;
-  background-color: brown;
+.Controller-main__1 > div {
+  width: 110px;
+  height: 35px;
+  margin-top: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.Controller-main__1 > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Controller-main__1--text {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.Controller-main__2 {
+  width: 100%;
+  height: 25%;
+}
+
+.Controller-main__2 > div {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.Controller-main__2 > div > img {
+  width: 90%;
+  height: 100%;
+}
+
+.Controller-main__3 {
+  width: 100%;
+  height: 25%;
+}
+
+.Controller-main__4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25%;
+}
+
+.Controller-main__4 > div {
+  width: 175.5px;
+  height: 49.5px;
+  position: relative;
+}
+
+.Controller-main__4 > div:active {
+  opacity: 0.5;
+}
+
+.Controller-main__4 > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+.Controller-main__4--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }

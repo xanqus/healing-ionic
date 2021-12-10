@@ -27,10 +27,13 @@ const Home: React.FC = () => {
           password: "password",
         }
       );
-      console.log(data.data);
+      const {
+        data: { user },
+      } = data;
+      console.log(user);
     };
     //createUser();
-    login();
+    //login();
   }, []);
   const [modalState, setModalState] = useState(false);
   const openModal = () => {

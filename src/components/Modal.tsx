@@ -35,6 +35,9 @@ const Contents = styled.div`
 const Modal: any = ({ state, closeModal, setModalState, history }: any) => {
   const [user, setUser] = useRecoilState<any | null>(userLoginState);
   const logout = () => setUser(null);
+  document.addEventListener("backbutton", (e) => {
+    closeModal(e);
+  });
   return state ? (
     <Container>
       <Overlay onClick={(event) => closeModal(event)}></Overlay>
@@ -88,6 +91,16 @@ const Modal: any = ({ state, closeModal, setModalState, history }: any) => {
             />
           </Link>
           <div className="Modal-body__message">이력관리</div>
+        </div>
+        <div className="Modal-body__btn">
+          <Link to="/controller">
+            <img
+              className="Modal-body__btn--img"
+              src="../assets/modal/control_on.png"
+              alt=""
+            />
+          </Link>
+          <div className="Modal-body__message">리모콘</div>
         </div>
         <div className="Modal-body__btn">
           <Link to="/">

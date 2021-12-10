@@ -35,4 +35,5 @@ select {
 
 .selfTest-focused {
   background-color: #2385ff;
+  color: white;
 }

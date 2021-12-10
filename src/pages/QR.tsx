@@ -1,8 +1,9 @@
 import "./QR.css";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import { withRouter } from "react-router";
 
-const QR: React.FC = () => {
+const QR: React.FC = ({ history }: any) => {
   return (
     <div className="QR-body__background">
       <Header />
@@ -24,4 +25,4 @@ const QR: React.FC = () => {
   );
 };
 
-export default QR;
+export default withRouter(QR);

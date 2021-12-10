@@ -10,6 +10,7 @@ const AudioPlayer: any = ({
   currentTime,
   durationTime,
   setCurrentTime,
+  playingTitle,
 }: any) => {
   const [timeline, setTimeLine] = useState(0);
 
@@ -46,7 +47,7 @@ const AudioPlayer: any = ({
             height: "30px",
           }}
         >
-          조용한 시계소리
+          {playingTitle}
         </div>
 
         <input

@@ -6,6 +6,7 @@ const HealingVideoPlayer: any = ({ location }: any) => {
   const {
     state: { videoLink },
   } = location;
+
   return (
     <div className="HealingVideoPlayer-body__background">
       <Header />

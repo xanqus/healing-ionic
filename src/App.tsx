@@ -19,21 +19,24 @@ import DiagnosisTest from "./pages/DiagnosisTest";
 import SelfDiagnosisResult from "./pages/SelfDiagnosisResult";
 import HealingVideoPlayer from "./pages/HealingVideoPlayer";
 import NotFound from "./pages/NotFound";
+import ControllerSelectMenu from "./pages/ControllerSelectMenu";
+import HealingContents from "./pages/HealingContents";
+import ExposureContents from "./pages/ExposureContents";
 
 //1vh = 12px
 
 const App: React.FC = () => {
   const [user, setUser] = useRecoilState<any | null>(userLoginState);
 
-  const { innerWidth: width, innerHeight: height } = window;
-  console.log(width, height);
-
   const authenticated = user != null;
   console.log("user", user);
   console.log("authenticated", authenticated);
 
-  const login = ({ email, password }: any) =>
-    setUser(signIn({ email, password }));
+  const login = async ({ email, password }: any) => {
+    const user = await signIn({ email, password });
+    setUser(user);
+  };
+
   const logout = () => setUser(null);
 
   return (
@@ -82,7 +85,10 @@ const App: React.FC = () => {
             <Route path="/healingVideos" component={HealingVideos} />
             <Route path="/HistoryManagement" component={HistoryManagement} />
             <Route path="/QR" component={QR} />
-            <Route path="/Controller" component={Controller} />
+            <Route path="/controller" component={Controller} exact />
+            <Route path="/controller/select" component={ControllerSelectMenu} />
+            <Route path="/controller/healing" component={HealingContents} />
+            <Route path="/controller/exposure" component={ExposureContents} />
             <Route path="/DiagnosisTest" component={DiagnosisTest} />
             <Route
               path="/selfDiagnosisResult"

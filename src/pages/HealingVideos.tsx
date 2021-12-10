@@ -1,16 +1,17 @@
 import "./HealingVideos.css";
+import { withRouter } from "react-router";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import TabMenuVideo from "../components/TabMenuVideo";
 import VideoBlock from "../components/VideoBlock";
-
 import {
   videoUrlList,
   videoContentList,
 } from "./../assets/dataset/healingVideosData";
 
-const HealingVideos: React.FC = () => {
+const HealingVideos: React.FC = ({ history }: any) => {
+  console.log(history);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
@@ -245,4 +246,4 @@ const HealingVideos: React.FC = () => {
   );
 };
 
-export default HealingVideos;
+export default withRouter(HealingVideos);

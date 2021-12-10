@@ -1,98 +1,86 @@
 import "./Controller.css";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Tab1 from "../components/controller/Tab1";
-import Tab2 from "./../components/controller/Tab2";
-import io from "socket.io-client";
-import { withRouter } from "react-router-dom";
+import { useEffect, useCallback } from "react";
+import { withRouter } from "react-router";
+import { setCallback } from "../socket/socket";
+import { RouteComponentProps } from "react-router-dom";
+import { LocationListener, Location, History, Action } from "history";
 
-const Controller: React.FC = ({ history }: any) => {
-  const executeCommand = (name: any, command: any) => {
-    socket.emit(
-      "executeCommand",
-      { name: name, command: command },
-      (data: any) => {
-        console.log(data);
-      }
-    );
-  };
-  const socket = io("ws://15.165.121.230:7770", {
-    transports: ["websocket"],
-  });
+interface ControllerProps extends RouteComponentProps {
+  history: History;
+  location: Location;
+}
 
+const Controller: React.FC<ControllerProps> = ({ history, location }) => {
   useEffect(() => {
-    socket.on("executeCommand", (data) => {
-      console.log("data", data);
+    console.log(location.pathname);
+    setCallback((data) => {
+      if (data.command[0] === "page1" && data.name === "page1") {
+        history.push("/controller/select");
+      } else if (data.command) {
+      }
+      console.log("dataFromPC(Contorller) :", data);
     });
-  }, []);
 
-  const getCommand = () => {
-    socket.emit("getCommand", (data: any) => {
-      console.log(data);
+    /*const listener: LocationListener = (location, action) => {
+      if (location.pathname !== "/controller") {
+        socket.close();
+        alert("close");
+      }
+    };
+    history.listen(listener);*/
+
+    history.listen((location: Location, action: Action) => {
+      if (location.pathname !== "/controller") {
+        //alert("close");
+      }
     });
-  };
-
-  const [currentTab, setCurrentTab] = useState(0);
-
-  const menuArr = [
-    { name: "힐링콘텐츠", content: "Tab menu ONE" },
-    { name: "노출경험용콘텐츠", content: "Tab menu TWO" },
-  ];
-  const selectMenuHandler = (index: any) => {
-    setCurrentTab(index);
-    if (index === 0) {
-      executeCommand("page1", "healing");
-    } else {
-      executeCommand("page1", "nochul");
-    }
-  };
+  }, [location.pathname, history]);
   return (
     <div className="Controller-body__background">
-      {/*<button onClick={getCommand}>명령어 조회</button>
-      <button
-        onClick={() => {
-          executeCommand();
-        }}
-      >
-        명령어 실행
-      </button>*/}
-      <div className="Controller-body__header">
+      <div className="Controller-main__1">
+        <div>
+          <img src="../assets/controller/hrc-btn-img-00.png" alt="" />
+          <div className="Controller-main__1--text">종료</div>
+        </div>
+      </div>
+      <div className="Controller-main__2">
+        <div>
+          <img src="../assets/controller/hrc-img-00.png" alt="" />
+        </div>
+      </div>
+      <div className="Controller-main__3">
+        <div>
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div className="Controller-main__4">
         <div>
           <img
-            onClick={() => {
-              history.push("/main");
-            }}
-            src="../assets/header/h-main-home.png"
+            src="../assets/controller/hrc-btn-img-01.png"
             alt=""
+            onClick={() => {
+              history.push("/controller/select");
+            }}
           />
+          <div className="Controller-main__4--text">시작</div>
         </div>
-        <div>리모콘</div>
-        <div></div>
       </div>
-
-      <div className="Controller-body__menu">
-        {menuArr.map((ele, index) => {
-          return (
-            <li
-              key={index}
-              className={
-                currentTab === index
-                  ? "Controller-body__menu--item Controller-body__menu--item-focused"
-                  : "Controller-body__menu--item"
-              }
-              onClick={() => {
-                selectMenuHandler(index);
-              }}
-            >
-              {ele.name}
-            </li>
-          );
-        })}
-      </div>
-      <div className="Controller-body__mainMenu">
-        {currentTab === 0 ? <Tab1 /> : <Tab2 />}
-      </div>
+      {/*
+      <button
+        onClick={() => {
+          //executeCommand("page8", "before");
+        }}
+      >
+        test
+      </button>
+      <button
+        onClick={() => {
+          //socket.close();
+          //console.log(socket);
+        }}
+      >
+        close
+      </button>*/}
     </div>
   );
 };

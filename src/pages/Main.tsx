@@ -8,8 +8,9 @@ import "./Main.css";
 import Modal from "./../components/Modal";
 
 const Home: React.FC = ({ history }: any) => {
+  console.log("history", history);
   const [user, setUser] = useRecoilState<any | null>(userLoginState);
-
+  console.log("useruser", user);
   const logout = () => setUser(null);
   const [modalState, setModalState] = useState(false);
   const [style, setStyle] = useState("");
@@ -21,6 +22,7 @@ const Home: React.FC = ({ history }: any) => {
     event.preventDefault();
     setModalState(false);
   };
+
   return (
     <div className="main-body__background">
       <div className="main-body__header">

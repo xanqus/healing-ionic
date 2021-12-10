@@ -18,6 +18,7 @@ const AudioBlock: any = ({
   currentTime,
   clickedIndex,
   setClickedIndex,
+  setPlayingTitle,
 }: any) => {
   function formatDuration(duration: any): any {
     return moment.duration(duration, "seconds");
@@ -66,6 +67,7 @@ const AudioBlock: any = ({
             audio.src = soundURL[currentIndex];
             start();
             setIsPlaying(true);
+            setPlayingTitle(content[currentIndex]);
           }}
         >
           <div className="AudioBlock-body__block--imgCover">

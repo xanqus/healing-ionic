@@ -14,6 +14,7 @@ const HealingSounds: any = ({ history }: any) => {
   const [durationTime, setDurationTime] = useState(0);
   const audio = useMemo(() => new Audio("/"), []);
   const [clickedIndex, setClickedIndex] = useState(-1);
+  const [playingTitle, setPlayingTitle] = useState("");
 
   useEffect(() => {
     return audio.pause();
@@ -30,6 +31,9 @@ const HealingSounds: any = ({ history }: any) => {
   audio.addEventListener("loadeddata", setAudioData);
 
   audio.addEventListener("timeupdate", setAudioTime);
+  document.addEventListener("backbutton", () => {
+    history.goBack();
+  });
 
   useEffect(() => {
     history.listen((location: any, action: any) => {
@@ -109,6 +113,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
 
             <AudioBlock
@@ -141,6 +146,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
 
             <AudioBlock
@@ -173,6 +179,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
 
             <AudioBlock
@@ -205,6 +212,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
             <AudioBlock
               key={5}
@@ -236,6 +244,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
             <AudioBlock
               key={6}
@@ -262,6 +271,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
 
             <AudioBlock
@@ -289,6 +299,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
             <AudioBlock
               key={8}
@@ -320,6 +331,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
             <AudioBlock
               key={9}
@@ -351,6 +363,7 @@ const HealingSounds: any = ({ history }: any) => {
               currentTime={currentTime}
               clickedIndex={clickedIndex}
               setClickedIndex={setClickedIndex}
+              setPlayingTitle={setPlayingTitle}
             ></AudioBlock>
           </TabMenu>
           {/*<div className="HealingSounds-body__sounds--BlockWrapper">
@@ -369,6 +382,7 @@ const HealingSounds: any = ({ history }: any) => {
             currentTime={currentTime}
             durationTime={durationTime}
             setCurrentTime={setCurrentTime}
+            playingTitle={playingTitle}
           />
         </div>
       </div>

@@ -220,7 +220,6 @@ svg {
   flex-direction: column;
   width: 90%;
   height: 220px;
-  border: 1px solid black;
 }
 
 .HistoryManagement-body__message--changeGraph > div:nth-child(1) {

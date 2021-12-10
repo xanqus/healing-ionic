@@ -2,8 +2,9 @@ import "./HistoryManagement.css";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import { Bar, Radar } from "react-chartjs-2";
+import { withRouter } from "react-router";
 
-const HistoryManagement: React.FC = () => {
+const HistoryManagement: React.FC = ({ history }: any) => {
   const barData = {
     labels: [
       "스트레스",
@@ -78,6 +79,7 @@ const HistoryManagement: React.FC = () => {
       },
     ],
   };
+
   return (
     <div className="HistoryManagement-body__background">
       <div className="HistoryMangement-header__background">
@@ -473,10 +475,10 @@ const HistoryManagement: React.FC = () => {
           </div>
           <div>
             <div>
-              <img src="../assets/historyManagement/h-sub-img-24.png" alt="" />
+              <img src="../assets/healingSounds/h-sub-soc-1.png" alt="" />
             </div>
             <div>
-              <img src="../assets/historyManagement/h-sub-img-25.png" alt="" />
+              <img src="../assets/healingSounds/h-sub-soc-2.png" alt="" />
             </div>
           </div>
         </div>
@@ -489,10 +491,10 @@ const HistoryManagement: React.FC = () => {
           </div>
           <div>
             <div>
-              <img src="../assets/historyManagement/h-sub-img-24.png" alt="" />
+              <img src="../assets/healingVideos/thumb-1.png" alt="" />
             </div>
             <div>
-              <img src="../assets/historyManagement/h-sub-img-26.png" alt="" />
+              <img src="../assets/healingVideos/thumb-2.png" alt="" />
             </div>
           </div>
         </div>
@@ -501,4 +503,4 @@ const HistoryManagement: React.FC = () => {
   );
 };
 
-export default HistoryManagement;
+export default withRouter(HistoryManagement);
