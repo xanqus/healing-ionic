@@ -1,0 +1,73 @@
+.SignalMeasurement-body__background {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/controller/hrc-img-02.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.SignalMeasurement-body__sub1 {
+  width: 100%;
+  height: 20%;
+}
+
+.SignalMeasurement-body__sub2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+}
+
+.SignalMeasurement-body__sub2 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+
+.SignalMeasurement-body__sub2 > div > div:first-child {
+  width: 30px;
+  height: 30px;
+}
+
+.SignalMeasurement-body__sub2 > div > div:first-child > img {
+  width: 100%;
+  height: 100%;
+}
+
+.SignalMeasurement-body__sub2 > div > div:last-child {
+  margin-left: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.SignalMeasurement-body__sub3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25%;
+}
+
+.SignalMeasurement-body__sub3 > div {
+  width: 95%;
+  height: 100%;
+
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.SignalMeasurement-body__sub3 > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+.SignalMeasurement-body__sub4 {
+  width: 100%;
+  height: 40%;
+}

@@ -4,6 +4,7 @@ import { withRouter } from "react-router";
 import { setCallback } from "../socket/socket";
 import { RouteComponentProps } from "react-router-dom";
 import { LocationListener, Location, History, Action } from "history";
+import BackButton from "./../components/controller/BackButton";
 
 interface ControllerProps extends RouteComponentProps {
   history: History;
@@ -54,14 +55,12 @@ const Controller: React.FC<ControllerProps> = ({ history, location }) => {
         </div>
       </div>
       <div className="Controller-main__4">
-        <div>
-          <img
-            src="../assets/controller/hrc-btn-img-01.png"
-            alt=""
-            onClick={() => {
-              history.push("/controller/select");
-            }}
-          />
+        <div
+          onClick={() => {
+            history.push("/controller/select");
+          }}
+        >
+          <img src="../assets/controller/hrc-btn-img-01.png" alt="" />
           <div className="Controller-main__4--text">시작</div>
         </div>
       </div>

@@ -22,6 +22,9 @@ import NotFound from "./pages/NotFound";
 import ControllerSelectMenu from "./pages/ControllerSelectMenu";
 import HealingContents from "./pages/HealingContents";
 import ExposureContents from "./pages/ExposureContents";
+import SignalMeasurement from "./pages/SignalMeasurement";
+import RecentHistory from "./pages/RecentHistory";
+import ControllerHealingVideos from "./pages/ControllerHealingVideos";
 
 //1vh = 12px
 
@@ -88,6 +91,15 @@ const App: React.FC = () => {
             <Route path="/controller" component={Controller} exact />
             <Route path="/controller/select" component={ControllerSelectMenu} />
             <Route path="/controller/healing" component={HealingContents} />
+            <Route
+              path="/controller/signalMeasurement"
+              component={SignalMeasurement}
+            />
+            <Route path="/controller/recentHistory" component={RecentHistory} />
+            <Route
+              path="/controller/healingVideos"
+              component={ControllerHealingVideos}
+            />
             <Route path="/controller/exposure" component={ExposureContents} />
             <Route path="/DiagnosisTest" component={DiagnosisTest} />
             <Route
