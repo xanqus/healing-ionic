@@ -1,8 +1,9 @@
 import "./ControllerSelectMenu.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { withRouter } from "react-router";
 import { setCallback } from "../socket/socket";
 import { History, Location } from "history";
+import Modal from "./../components/controller/Modal";
 
 interface ControllerSelectMenuProps {
   history: History;
@@ -13,6 +14,16 @@ const ControllerSelectMenu: React.FC<ControllerSelectMenuProps> = ({
   history,
   location,
 }) => {
+  const [modalState, setModalState] = useState(false);
+
+  const openModal = () => {
+    setModalState(true);
+  };
+
+  const closeModal = (event: any) => {
+    event.preventDefault();
+    setModalState(false);
+  };
   useEffect(() => {
     console.log(location.pathname);
 
@@ -28,7 +39,30 @@ const ControllerSelectMenu: React.FC<ControllerSelectMenuProps> = ({
   }, [location.pathname, history]);
   return (
     <div className="ControllerSelectMenu-body__background">
-      <div className="ControllerSelectMenu__sub-1"></div>
+      <div className="ControllerSelectMenu__sub-1">
+        <div>
+          <img
+            src="../assets/controller/hrc-btn-img-00.png"
+            alt=""
+            onClick={() => {
+              openModal();
+            }}
+          />
+          <div
+            className="Controller-main__1--text"
+            onClick={() => {
+              openModal();
+            }}
+          >
+            종료
+          </div>
+          <Modal
+            state={modalState}
+            setModalState={setModalState}
+            closeModal={closeModal}
+          />
+        </div>
+      </div>
       <div className="ControllerSelectMenu__sub-2">
         원하시는 메뉴를 눌러주세요.
       </div>

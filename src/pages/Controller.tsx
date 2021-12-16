@@ -1,10 +1,11 @@
 import "./Controller.css";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { withRouter } from "react-router";
 import { setCallback } from "../socket/socket";
 import { RouteComponentProps } from "react-router-dom";
 import { LocationListener, Location, History, Action } from "history";
 import BackButton from "./../components/controller/BackButton";
+import Modal from "./../components/controller/Modal";
 
 interface ControllerProps extends RouteComponentProps {
   history: History;
@@ -12,6 +13,16 @@ interface ControllerProps extends RouteComponentProps {
 }
 
 const Controller: React.FC<ControllerProps> = ({ history, location }) => {
+  const [modalState, setModalState] = useState(false);
+
+  const openModal = () => {
+    setModalState(true);
+  };
+
+  const closeModal = (event: any) => {
+    event.preventDefault();
+    setModalState(false);
+  };
   useEffect(() => {
     console.log(location.pathname);
     setCallback((data) => {
@@ -40,8 +51,26 @@ const Controller: React.FC<ControllerProps> = ({ history, location }) => {
     <div className="Controller-body__background">
       <div className="Controller-main__1">
         <div>
-          <img src="../assets/controller/hrc-btn-img-00.png" alt="" />
-          <div className="Controller-main__1--text">종료</div>
+          <img
+            src="../assets/controller/hrc-btn-img-00.png"
+            alt=""
+            onClick={() => {
+              openModal();
+            }}
+          />
+          <div
+            className="Controller-main__1--text"
+            onClick={() => {
+              openModal();
+            }}
+          >
+            종료
+          </div>
+          <Modal
+            state={modalState}
+            setModalState={setModalState}
+            closeModal={closeModal}
+          />
         </div>
       </div>
       <div className="Controller-main__2">

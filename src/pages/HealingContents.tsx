@@ -22,13 +22,14 @@ const HealingContents: React.FC<HealingContentsProps> = ({ history }) => {
           </div>
         </div>
       </div>
-      <div
-        className="HealingContents-body__sub3"
-        onClick={() => {
-          history.push("/controller/signalMeasurement");
-        }}
-      >
-        <div>시작</div>
+      <div className="HealingContents-body__sub3">
+        <div
+          onClick={() => {
+            history.push("/controller/signalMeasurement");
+          }}
+        >
+          시작
+        </div>
       </div>
     </div>
   );
