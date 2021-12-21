@@ -39,7 +39,7 @@ const Contents = styled.div`
 `;
 
 const Modal: any = withRouter(
-  ({exposure, state, closeModal, openModal, setModalState, history, toGo, location}: any) => {
+  ({healing, exposure, state, closeModal, openModal, setModalState, history, toGo, location}: any) => {
     document.addEventListener('backbutton', e => {
       closeModal(e);
     });
@@ -83,7 +83,7 @@ const Modal: any = withRouter(
                 <button
                   onClick={() => {
                     if (toGo === 'first') {
-                      if (exposure) {
+                      if (exposure === 'exposure') {
                         executeCommand('BB', 'NOCHUL_POPUP_YES');
                       } else {
                         executeCommand('BB', 'FIRST_POPUP_YES');
@@ -106,7 +106,7 @@ const Modal: any = withRouter(
                 <button
                   onClick={event => {
                     if (toGo === 'first') {
-                      if (exposure) {
+                      if (exposure === 'exposure') {
                         executeCommand('BB', 'NOCHUL_POPUP_NO');
                       } else {
                         executeCommand('BB', 'FIRST_POPUP_NO');

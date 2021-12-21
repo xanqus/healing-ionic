@@ -19,7 +19,7 @@ const HealingContents: React.FC<HealingContentsProps> = ({history, location}) =>
     setModalState(true);
   };
 
-  const closeModal = (event: any) => {
+  const closeModal = () => {
     //event.preventDefault();
     setModalState(false);
   };
@@ -30,6 +30,10 @@ const HealingContents: React.FC<HealingContentsProps> = ({history, location}) =>
     setCallback(data => {
       if (data.command[0] === 'HEALING_START') {
         history.push('/controller/signalMeasurement');
+      } else if (data.command[0] === 'FIRST_POPUP_YES') {
+        history.push('/controller/select');
+      } else if (data.command[0] === 'FIRST_POPUP_NO') {
+        closeModal();
       }
       console.log('dataFromPC(Contorlle/select) :', data);
     });
@@ -44,6 +48,7 @@ const HealingContents: React.FC<HealingContentsProps> = ({history, location}) =>
     <div className="HealingContents-body__background">
       <div className="HealingContents-body__sub1">
         <GoBackFirstButton
+          healing="healing"
           modalState={modalState}
           setModalState={setModalState}
           openModal={openModal}

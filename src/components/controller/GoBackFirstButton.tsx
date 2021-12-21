@@ -13,6 +13,7 @@ const GoBackFirstButton: React.FC = ({
   closeModal,
   history,
   location,
+  healing,
   exposure,
 }: any) => {
   useEffect(() => {
@@ -58,6 +59,7 @@ const GoBackFirstButton: React.FC = ({
         처음으로
       </div>
       <Modal
+        healing
         exposure
         openModal={openModal}
         toGo={'first'}

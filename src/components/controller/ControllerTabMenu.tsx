@@ -3,14 +3,7 @@ import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {executeCommand, setCallback} from '../../socket/socket';
 
-const ControllerTabMenu: any = ({
-  children,
-  currentIndex,
-  setCurrentIndex,
-  selectMenuHandler,
-  currentTab,
-  setCurrentTab,
-}: any) => {
+const ControllerTabMenu: any = ({children, selectMenuHandler, currentTab, setCurrentTab}: any) => {
   const menuArr = [
     {name: '동물', content: 'Tab menu ONE'},
     {name: '일상', content: 'Tab menu TWO'},
@@ -35,7 +28,7 @@ const ControllerTabMenu: any = ({
                   : 'ControllerTabMenu-submenu'
               }
               onClick={() => {
-                setCurrentIndex(index); // 내용 결정
+                setCurrentTab(index); // 내용 결정
                 selectMenuHandler(index); // 탭 결정
                 executeCommand('BB', `TAB${index + 1}`);
               }}

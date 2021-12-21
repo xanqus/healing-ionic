@@ -42,7 +42,7 @@ const ControllerSurvey: React.FC = ({location, history}: any) => {
       }
       console.log('dataFromPC(Contorller) :', data);
     });
-  }, []);
+  }, [history, location.pathname]);
 
   return (
     <div className="ControllerSurvey-body__background">

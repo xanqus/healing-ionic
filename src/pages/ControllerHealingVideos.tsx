@@ -71,7 +71,6 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
   ];
   const menuCategory = ['동물', '일상', '음식', '자연', '파티클'];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTab, setCurrentTab] = useState(0);
   const selectMenuHandler = (index: any) => {
     setCurrentTab(index);
@@ -142,10 +141,27 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
       } else if (data.command[0] === 'FIRST_POPUP_NO') {
         setModalState(false);
       } else if (data.command[0] === 'PLUS') {
-        console.log('currentIndex', currentIndex);
-        console.log('currentTab', currentTab);
-        setCurrentIndex(2);
+        if (currentTab === 4) {
+          setCurrentTab(0);
+        } else {
+          setCurrentTab(currentTab + 1);
+        }
+      } else if (data.command[0] === 'MINUS') {
+        if (currentTab === 0) {
+          setCurrentTab(4);
+        } else {
+          setCurrentTab(currentTab - 1);
+        }
+      } else if (data.command[0] === 'TAB1') {
+        setCurrentTab(0);
+      } else if (data.command[0] === 'TAB2') {
+        setCurrentTab(1);
+      } else if (data.command[0] === 'TAB3') {
         setCurrentTab(2);
+      } else if (data.command[0] === 'TAB4') {
+        setCurrentTab(3);
+      } else if (data.command[0] === 'TAB5') {
+        setCurrentTab(4);
       }
 
       console.log('dataFromPC(Contorller/HealingVideos) :', data);
@@ -159,12 +175,14 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
     };
     history.listen(listener);*/
 
+    console.log('currentTab', currentTab);
+
     history.listen((location: any, action: any) => {
       if (location.pathname !== '/signalMeasurement') {
         //alert('close');
       }
     });
-  }, [location.pathname, history]);
+  }, [location.pathname, history, currentTab, contentArr]);
   return (
     <div className="ControllerHealingVideos-body__background">
       <div className="ControllerHealingVideos-body__sub1">
@@ -186,15 +204,13 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
       <div className="ControllerHealingVideos-body__sub3">
         <div className="HealingVideos-body__tabMenu">
           <ControllerTabMenu
-            currentIndex={currentIndex}
             currentTab={currentTab}
             setCurrentTab={setCurrentTab}
             selectMenuHandler={selectMenuHandler}
-            setCurrentIndex={setCurrentIndex}
           >
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['부엉이', '페인팅', '그릴구이', '황혼의 산 중턱', '메탈 원통']}
               imgURL={[
                 '../assets/controller/thumbnail/animal1.png',
@@ -208,7 +224,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['휴식중인 고양이', '페인팅', '피자만들기', '안개 낀 숲속', '메탈 원통']}
               imgURL={[
                 '../assets/controller/thumbnail/animal2.png',
@@ -222,7 +238,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['휴식중인 고양이', '도자기 물레', '과일자르기', '한적한 해변', '굴러가는 공']}
               imgURL={[
                 '../assets/controller/thumbnail/animal3.png',
@@ -236,7 +252,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['웰시코기', '도자기 만들기', '딸기', '숲 속의 폭포', '움직이는 쇠구슬']}
               imgURL={[
                 '../assets/controller/thumbnail/animal4.png',
@@ -250,7 +266,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['아쿠아리움', '손글씨', '키위', '해변', '움직이는 색입자']}
               imgURL={[
                 '../assets/controller/thumbnail/animal5.png',
@@ -264,7 +280,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['아쿠아리움', '맥주 공정', null, '해변', ' 파티클 해파리']}
               imgURL={[
                 '../assets/controller/thumbnail/animal6.png',
@@ -278,7 +294,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['해파리', '와펜 자수 공장', null, '강과 호수', '푸른 불빛의 호수']}
               imgURL={[
                 '../assets/controller/thumbnail/animal7.png',
@@ -292,7 +308,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['양떼', '에스프레소', null, '강과 호수', '푸른 불빛의 호수']}
               imgURL={[
                 '../assets/controller/thumbnail/animal8.png',
@@ -306,7 +322,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['펭귄', '에스프레소', null, '노을이 지는 물가', '캠프파이어']}
               imgURL={[
                 '../assets/controller/thumbnail/animal9.png',
@@ -320,7 +336,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={['독수리', '도시의러너', null, '흔들리는 풀과 갈대', '고래와 나비의 밤']}
               imgURL={[
                 '../assets/controller/thumbnail/animal10.png',
@@ -334,7 +350,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={[null, null, null, '폭포', null]}
               imgURL={[null, null, null, '../assets/controller/thumbnail/nature11.png', null]}
               socketCommand={[null, null, null, 'nature11', null]}
@@ -342,7 +358,7 @@ const ControllerHealingVideos: any = ({history, location}: any) => {
             />
             <ControllerVideoBlock
               category={menuCategory}
-              currentIndex={currentIndex}
+              currentTab={currentTab}
               content={[null, null, null, '폭포', null]}
               imgURL={[null, null, null, '../assets/controller/thumbnail/nature12.png', null]}
               socketCommand={[null, null, null, 'nature12', null]}
