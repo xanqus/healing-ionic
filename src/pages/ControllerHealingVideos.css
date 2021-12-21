@@ -1,26 +1,26 @@
 .ControllerHealingVideos-body__background {
   width: 100%;
   height: 1000px;
-  background-image: url("../assets/controller/hrc-img-02.png");
+  background-image: url('../assets/controller/hrc-img-02.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .ControllerHealingVideos-body__sub1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   width: 100%;
   height: 50px;
-  border: 1px solid black;
 }
 
 .ControllerHealingVideos-body__sub2 {
   display: flex;
-
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100px;
-  border: 1px solid black;
 }
 
 .ControllerHealingVideos-body__sub2 > div {
@@ -51,5 +51,36 @@
 .ControllerHealingVideos-body__sub3 {
   width: 100%;
   height: 850px;
-  border: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ControllerHealingVideos__li-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+.ControllerHealingVideos-submenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  padding: 15px 10px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  font-size: 18px;
+  margin-bottom: -10px;
+  color: white;
+  border-bottom: 3px solid #dddddd;
+}
+
+.ControllerHealingVideos-focused {
+  border-bottom: 3px solid #00ff91;
 }

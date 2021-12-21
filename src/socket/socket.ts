@@ -1,12 +1,12 @@
-import { io } from "socket.io-client";
+import {io} from 'socket.io-client';
 
-export const socket = io("ws://15.165.121.230:7770", {
-  transports: ["websocket"],
+export const socket = io('ws://15.165.121.230:7770', {
+  transports: ['websocket'],
   upgrade: false,
 });
 socket.connect();
 export const receiveCommand = () => {
-  console.log("controllerSocket", socket);
+  console.log('controllerSocket', socket);
 };
 
 interface Data {
@@ -16,8 +16,14 @@ interface Data {
 
 type SetCallback = (cb: (data: Data) => void) => void;
 
-export const setCallback: SetCallback = (cb) => {
-  console.log("callback changed");
-  socket.off("setCommand");
-  socket.on("setCommand", cb);
+export const setCallback: SetCallback = cb => {
+  //console.log('callback changed');
+  socket.off('setCommand');
+  socket.on('setCommand', cb);
+};
+
+export const executeCommand = (name: any, command: any) => {
+  socket.emit('executeCommand', {name, command}, (data: any) => {
+    console.log('data', data);
+  });
 };

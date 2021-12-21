@@ -1,16 +1,55 @@
-import "./HealingContents.css";
-import { withRouter } from "react-router";
-import { RouteComponentProps } from "react-router-dom";
-import { History } from "history";
+import './HealingContents.css';
+import {useState, useEffect} from 'react';
+import {setCallback} from '../socket/socket';
+import {withRouter} from 'react-router';
+import {RouteComponentProps} from 'react-router-dom';
+import {History} from 'history';
+import {executeCommand} from '../socket/socket';
+import Modal from '../components/Modal';
+import GoBackFirstButton from '../components/controller/GoBackFirstButton';
 
 interface HealingContentsProps extends RouteComponentProps {
   history: History;
 }
 
-const HealingContents: React.FC<HealingContentsProps> = ({ history }) => {
+const HealingContents: React.FC<HealingContentsProps> = ({history, location}) => {
+  const [modalState, setModalState] = useState(false);
+
+  const openModal = () => {
+    setModalState(true);
+  };
+
+  const closeModal = (event: any) => {
+    //event.preventDefault();
+    setModalState(false);
+  };
+
+  useEffect(() => {
+    console.log(location.pathname);
+
+    setCallback(data => {
+      if (data.command[0] === 'HEALING_START') {
+        history.push('/controller/signalMeasurement');
+      }
+      console.log('dataFromPC(Contorlle/select) :', data);
+    });
+    history.listen((location: any, action: any) => {
+      if (location.pathname !== '/controller/select') {
+        //alert("close/select");
+      } else {
+      }
+    });
+  }, [location.pathname, history]);
   return (
     <div className="HealingContents-body__background">
-      <div className="HealingContents-body__sub1"></div>
+      <div className="HealingContents-body__sub1">
+        <GoBackFirstButton
+          modalState={modalState}
+          setModalState={setModalState}
+          openModal={openModal}
+          closeModal={closeModal}
+        />
+      </div>
       <div className="HealingContents-body__sub2">
         <div>
           <img src="../assets/controller/hrc-img-06.png" alt="" />
@@ -25,7 +64,8 @@ const HealingContents: React.FC<HealingContentsProps> = ({ history }) => {
       <div className="HealingContents-body__sub3">
         <div
           onClick={() => {
-            history.push("/controller/signalMeasurement");
+            executeCommand('BB', 'HEALING_START');
+            history.push('/controller/signalMeasurement');
           }}
         >
           시작

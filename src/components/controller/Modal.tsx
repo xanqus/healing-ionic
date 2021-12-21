@@ -1,7 +1,9 @@
-import "./Modal.css";
-import { Link, withRouter } from "react-router-dom";
-import styled from "styled-components";
-import { useRecoilState } from "recoil";
+import './Modal.css';
+import {useEffect} from 'react';
+import {Link, withRouter} from 'react-router-dom';
+import styled from 'styled-components';
+import {useRecoilState} from 'recoil';
+import {executeCommand, setCallback} from '../../socket/socket';
 
 const Container = styled.div`
   position: fixed;
@@ -37,18 +39,31 @@ const Contents = styled.div`
 `;
 
 const Modal: any = withRouter(
-  ({ state, closeModal, setModalState, history }: any) => {
-    document.addEventListener("backbutton", (e) => {
+  ({exposure, state, closeModal, openModal, setModalState, history, toGo, location}: any) => {
+    document.addEventListener('backbutton', e => {
       closeModal(e);
     });
+    useEffect(() => {
+      console.log(location.pathname);
+
+      setCallback(data => {
+        console.log('dataFromPC(Contorlle/select) :', data);
+      });
+      history.listen((location: any, action: any) => {
+        if (location.pathname !== '/controller/select') {
+          //alert("close/select");
+        } else {
+        }
+      });
+    }, [location.pathname, history]);
     return state ? (
       <Container>
         <Overlay
-          onClick={(event) => {
+          onClick={event => {
             closeModal(event);
           }}
         ></Overlay>
-        <Contents onClick={(event) => {}}>
+        <Contents onClick={event => {}}>
           <div className="ControllerModal-body">
             <div className="ControllerModal-body__img">
               <div>
@@ -57,13 +72,31 @@ const Modal: any = withRouter(
               </div>
             </div>
             <div className="ControllerModal-body__message">
-              종료하시겠습니까?
+              {toGo === 'first'
+                ? '처음으로 가시겠습니까?'
+                : toGo === 'before'
+                ? '이전으로 가시겠습니까?'
+                : '종료하시겠습니까?'}
             </div>
             <div className="ControllerModal-body__btn--wrapper">
               <div>
                 <button
                   onClick={() => {
-                    history.push("/main");
+                    if (toGo === 'first') {
+                      if (exposure) {
+                        executeCommand('BB', 'NOCHUL_POPUP_YES');
+                      } else {
+                        executeCommand('BB', 'FIRST_POPUP_YES');
+                      }
+
+                      history.push('/controller/select');
+                    } else if (toGo === 'before') {
+                      executeCommand('BB', 'BEFORE_POPUP_YES');
+                      history.goBack();
+                    } else {
+                      executeCommand('BB', 'EXIT');
+                      history.push('/main');
+                    }
                   }}
                 >
                   예
@@ -71,7 +104,17 @@ const Modal: any = withRouter(
               </div>
               <div>
                 <button
-                  onClick={(event) => {
+                  onClick={event => {
+                    if (toGo === 'first') {
+                      if (exposure) {
+                        executeCommand('BB', 'NOCHUL_POPUP_NO');
+                      } else {
+                        executeCommand('BB', 'FIRST_POPUP_NO');
+                      }
+                    } else if (toGo === 'before') {
+                      executeCommand('BB', 'BEFORE_POPUP_NO');
+                    }
+
                     closeModal(event);
                   }}
                 >
@@ -85,7 +128,7 @@ const Modal: any = withRouter(
     ) : (
       <></>
     );
-  }
+  },
 );
 
 export default Modal;

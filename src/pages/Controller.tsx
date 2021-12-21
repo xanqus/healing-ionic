@@ -1,18 +1,18 @@
-import "./Controller.css";
-import { useEffect, useCallback, useState } from "react";
-import { withRouter } from "react-router";
-import { setCallback } from "../socket/socket";
-import { RouteComponentProps } from "react-router-dom";
-import { LocationListener, Location, History, Action } from "history";
-import BackButton from "./../components/controller/BackButton";
-import Modal from "./../components/controller/Modal";
+import './Controller.css';
+import {useEffect, useCallback, useState} from 'react';
+import {withRouter} from 'react-router';
+import {setCallback} from '../socket/socket';
+import {RouteComponentProps} from 'react-router-dom';
+import {LocationListener, Location, History, Action} from 'history';
+import BackButton from './../components/controller/BackButton';
+import Modal from './../components/controller/Modal';
 
 interface ControllerProps extends RouteComponentProps {
   history: History;
   location: Location;
 }
 
-const Controller: React.FC<ControllerProps> = ({ history, location }) => {
+const Controller: React.FC<ControllerProps> = ({history, location}) => {
   const [modalState, setModalState] = useState(false);
 
   const openModal = () => {
@@ -23,14 +23,18 @@ const Controller: React.FC<ControllerProps> = ({ history, location }) => {
     event.preventDefault();
     setModalState(false);
   };
+
   useEffect(() => {
     console.log(location.pathname);
-    setCallback((data) => {
-      if (data.command[0] === "page1" && data.name === "page1") {
-        history.push("/controller/select");
-      } else if (data.command) {
+    setCallback(data => {
+      if (data.command[0] === 'HEALING') {
+        history.push('/controller/healing');
+      } else if (data.command[0] === 'NOCHUL') {
+        history.push('/controller/exposure');
+      } else if (data.command[0] === 'EXIT') {
+        history.push('/main');
       }
-      console.log("dataFromPC(Contorller) :", data);
+      console.log('dataFromPC(Contorller) :', data);
     });
 
     /*const listener: LocationListener = (location, action) => {
@@ -42,7 +46,7 @@ const Controller: React.FC<ControllerProps> = ({ history, location }) => {
     history.listen(listener);*/
 
     history.listen((location: Location, action: Action) => {
-      if (location.pathname !== "/controller") {
+      if (location.pathname !== '/controller') {
         //alert("close");
       }
     });
@@ -66,11 +70,7 @@ const Controller: React.FC<ControllerProps> = ({ history, location }) => {
           >
             종료
           </div>
-          <Modal
-            state={modalState}
-            setModalState={setModalState}
-            closeModal={closeModal}
-          />
+          <Modal state={modalState} setModalState={setModalState} closeModal={closeModal} />
         </div>
       </div>
       <div className="Controller-main__2">
@@ -86,7 +86,7 @@ const Controller: React.FC<ControllerProps> = ({ history, location }) => {
       <div className="Controller-main__4">
         <div
           onClick={() => {
-            history.push("/controller/select");
+            history.push('/controller/select');
           }}
         >
           <img src="../assets/controller/hrc-btn-img-01.png" alt="" />

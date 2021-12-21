@@ -1,16 +1,11 @@
-import "./Tab1.css";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import ControlBlock from "./ControlBlock";
-import Carousel from "react-elastic-carousel";
-import io from "socket.io-client";
+import './Tab1.css';
+import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
+import ControlBlock from './ControlBlock';
+import Carousel from 'react-elastic-carousel';
+import io from 'socket.io-client';
 
-import {
-  defaultDataSet1,
-  defaultDataSet2,
-  defaultDataSet3,
-  defaultDataSet4,
-} from "./dataset";
+import {defaultDataSet1, defaultDataSet2, defaultDataSet3, defaultDataSet4} from './dataset';
 
 const Tab1: React.FC = () => {
   const defaultData1 = defaultDataSet1;
@@ -22,33 +17,31 @@ const Tab1: React.FC = () => {
   const defaultData4 = defaultDataSet4;
   const [data4, setData4] = useState(defaultDataSet4);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentPlaying, setCurrentPlaying] = useState("");
-  const [style, setStyle] = useState("");
-  const socket = io("ws://15.165.121.230:7770", {
-    transports: ["websocket"],
+  const [currentPlaying, setCurrentPlaying] = useState('');
+  const [style, setStyle] = useState('');
+  const socket = io('ws://15.165.121.230:7770', {
+    transports: ['websocket'],
   });
 
   const executeCommand = (name: any, command: any) => {
-    socket.emit("executeCommand", { name, command }, (data: any) => {
+    socket.emit('executeCommand', {name, command}, (data: any) => {
       console.log(data);
     });
   };
 
   useEffect(() => {
-    socket.on("connect", function () {
-      console.log("Connected");
+    socket.on('connect', function () {
+      console.log('Connected');
     });
 
-    socket.on("sessionStart", function (data) {
+    socket.on('sessionStart', function (data) {
       console.log(data);
     });
   });
   return (
     <div className="Tab1-body__background">
       <div className="Tab1-body__currentPlay">
-        {isPlaying
-          ? `${currentPlaying}이(가) 재생중입니다.`
-          : "현재 재생중인 영상이 없습니다."}
+        {isPlaying ? `${currentPlaying}이(가) 재생중입니다.` : '현재 재생중인 영상이 없습니다.'}
       </div>
       <Carousel isRTL={false} itemsToShow={1}>
         <div className="Tab1-body__content--background">
@@ -127,61 +120,61 @@ const Tab1: React.FC = () => {
       </Carousel>
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          height: "50px",
-          borderRadius: "30px",
-          overflow: "hidden",
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',
+          height: '50px',
+          borderRadius: '30px',
+          overflow: 'hidden',
         }}
       >
         <img
           style={{
-            width: "80%",
-            height: "100%",
-            objectFit: "cover",
-            borderRadius: "30px",
+            width: '80%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '30px',
           }}
           src="../assets/controller/button-back-on.png"
           alt=""
           className={style}
-          onMouseDown={(e) => {
-            setStyle("clicked");
+          onMouseDown={e => {
+            setStyle('clicked');
           }}
-          onMouseUp={(e) => {
-            setStyle("");
+          onMouseUp={e => {
+            setStyle('');
           }}
           onClick={() => {
-            executeCommand("page8", "before");
+            executeCommand('page8', 'before');
             setIsPlaying(false);
             setData1(
               data1.map((data: any): any => {
                 return {
                   ...defaultData1[data.id],
                 };
-              })
+              }),
             );
             setData2(
               data1.map((data: any): any => {
                 return {
                   ...defaultData2[data.id],
                 };
-              })
+              }),
             );
             setData3(
               data1.map((data: any): any => {
                 return {
                   ...defaultData3[data.id],
                 };
-              })
+              }),
             );
             setData4(
               data1.map((data: any): any => {
                 return {
                   ...defaultData4[data.id],
                 };
-              })
+              }),
             );
           }}
         />

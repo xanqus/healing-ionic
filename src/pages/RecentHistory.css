@@ -1,23 +1,56 @@
 .RecentHistory-body__background {
   width: 100%;
   height: 100vh;
-  background-image: url("../assets/controller/hrc-img-02.png");
+  background-image: url('../assets/controller/hrc-img-02.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .RecentHistory-body__sub1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   width: 100%;
   height: 7.5%;
-  border: 1px solid black;
 }
 
 .RecentHistory-body__sub2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 12.5%;
-  border: 1px solid black;
 }
+
+/**/
+.RecentHistory-body__sub2 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+
+.RecentHistory-body__sub2 > div > div:first-child {
+  width: 30px;
+  height: 30px;
+}
+
+.RecentHistory-body__sub2 > div > div:first-child > img {
+  width: 100%;
+  height: 100%;
+}
+
+.RecentHistory-body__sub2 > div > div:last-child {
+  margin-left: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: 550;
+  white-space: nowrap;
+}
+/**/
 
 .RecentHistory-body__sub3 {
   display: flex;
@@ -25,13 +58,12 @@
   justify-content: center;
   width: 100%;
   height: 25%;
-  border: 1px solid black;
 }
 
 .RecentHistory-body__sub3 > div {
   width: 90%;
   height: 90%;
-  background-image: url("../assets/controller/hrc-img-08.png");
+  background-image: url('../assets/controller/hrc-img-08.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -43,16 +75,35 @@
   justify-content: center;
   width: 100%;
   height: 40%;
-  border: 1px solid black;
 }
 
 .RecentHistory-body__sub4 > div {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 90%;
   height: 90%;
-  background-image: url("../assets/controller/hrc-img-09.png");
+  background-image: url('../assets/controller/hrc-img-09.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.RecentHistory-body__sub4 > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100%);
+  height: 100%;
+}
+
+.RecentHistory-body__sub4 > div > div > svg {
+  width: 75%;
+  height: 75%;
+}
+
+.RecentHistory-body__sub4 > div > div > svg > circle {
+  border: 1px solid black;
 }
 
 .RecentHistory-body__sub5 {
@@ -61,7 +112,6 @@
   justify-content: center;
   width: 100%;
   height: 15%;
-  border: 1px solid black;
 }
 
 .RecentHistory-body__sub5 > div {

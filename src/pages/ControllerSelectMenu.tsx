@@ -1,19 +1,16 @@
-import "./ControllerSelectMenu.css";
-import { useEffect, useState } from "react";
-import { withRouter } from "react-router";
-import { setCallback } from "../socket/socket";
-import { History, Location } from "history";
-import Modal from "./../components/controller/Modal";
+import './ControllerSelectMenu.css';
+import {useEffect, useState} from 'react';
+import {withRouter} from 'react-router';
+import {executeCommand, setCallback} from '../socket/socket';
+import {History, Location} from 'history';
+import Modal from './../components/controller/Modal';
 
 interface ControllerSelectMenuProps {
   history: History;
   location: Location;
 }
 
-const ControllerSelectMenu: React.FC<ControllerSelectMenuProps> = ({
-  history,
-  location,
-}) => {
+const ControllerSelectMenu: React.FC<ControllerSelectMenuProps> = ({history, location}) => {
   const [modalState, setModalState] = useState(false);
 
   const openModal = () => {
@@ -27,11 +24,18 @@ const ControllerSelectMenu: React.FC<ControllerSelectMenuProps> = ({
   useEffect(() => {
     console.log(location.pathname);
 
-    setCallback((data) => {
-      console.log("dataFromPC(Contorlle/select) :", data);
+    setCallback(data => {
+      if (data.command[0] === 'HEALING') {
+        history.push('/controller/healing');
+      } else if (data.command[0] === 'NOCHUL') {
+        history.push('/controller/exposure');
+      } else if (data.command[0] === 'EXIT') {
+        history.push('/main');
+      }
+      console.log('dataFromPC(Contorlle/select) :', data);
     });
     history.listen((location: any, action: any) => {
-      if (location.pathname !== "/controller/select") {
+      if (location.pathname !== '/controller/select') {
         //alert("close/select");
       } else {
       }
@@ -49,23 +53,17 @@ const ControllerSelectMenu: React.FC<ControllerSelectMenuProps> = ({
             }}
           />
           <div
-            className="Controller-main__1--text"
+            className="ControllerSelectMenu-main__1--text"
             onClick={() => {
               openModal();
             }}
           >
             종료
           </div>
-          <Modal
-            state={modalState}
-            setModalState={setModalState}
-            closeModal={closeModal}
-          />
+          <Modal state={modalState} setModalState={setModalState} closeModal={closeModal} />
         </div>
       </div>
-      <div className="ControllerSelectMenu__sub-2">
-        원하시는 메뉴를 눌러주세요.
-      </div>
+      <div className="ControllerSelectMenu__sub-2">원하시는 메뉴를 눌러주세요.</div>
       <div className="ControllerSelectMenu__sub-3">
         <div className="ControllerSelectMenu__sub-3--img">
           <img src="../assets/controller/hrc-img-03.png" alt="" />
@@ -73,7 +71,8 @@ const ControllerSelectMenu: React.FC<ControllerSelectMenuProps> = ({
         <button
           className="ControllerSelectMenu__sub-3--btn"
           onClick={() => {
-            history.push("/controller/healing");
+            executeCommand('BB', 'HEALING');
+            history.push('/controller/healing');
           }}
         >
           힐링콘텐츠
@@ -86,7 +85,8 @@ const ControllerSelectMenu: React.FC<ControllerSelectMenuProps> = ({
         <button
           className="ControllerSelectMenu__sub-4--btn"
           onClick={() => {
-            history.push("/controller/exposure");
+            executeCommand('BB', 'NOCHUL');
+            history.push('/controller/exposure');
           }}
         >
           노출경험용콘텐츠

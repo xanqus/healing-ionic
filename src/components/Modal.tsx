@@ -1,8 +1,8 @@
-import "./Modal.css";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { useRecoilState } from "recoil";
-import { userLoginState } from "./../recoil/user";
+import './Modal.css';
+import {Link} from 'react-router-dom';
+import styled from 'styled-components';
+import {useRecoilState} from 'recoil';
+import {userLoginState} from './../recoil/user';
 
 const Container = styled.div`
   position: fixed;
@@ -32,73 +32,49 @@ const Contents = styled.div`
   overflow-y: auto;
 `;
 
-const Modal: any = ({ state, closeModal, setModalState, history }: any) => {
+const Modal: any = ({state, closeModal, setModalState, history}: any) => {
   const [user, setUser] = useRecoilState<any | null>(userLoginState);
   const logout = () => setUser(null);
-  document.addEventListener("backbutton", (e) => {
+  document.addEventListener('backbutton', e => {
     closeModal(e);
   });
   return state ? (
     <Container>
-      <Overlay onClick={(event) => closeModal(event)}></Overlay>
-      <Contents onClick={(event) => closeModal(event)}>
+      <Overlay onClick={event => closeModal(event)}></Overlay>
+      <Contents onClick={event => closeModal(event)}>
         <div className="Modal-body__btn">
           <Link to="/main">
-            <img
-              className="Modal-body__btn--img"
-              src="../assets/modal/h-qm-0.png"
-              alt=""
-            />
+            <img className="Modal-body__btn--img" src="../assets/modal/h-qm-0.png" alt="" />
           </Link>
           <div className="Modal-body__message">메인으로</div>
         </div>
         <div className="Modal-body__btn">
           <Link to="/healingSounds">
-            <img
-              className="Modal-body__btn--img"
-              src="../assets/modal/h-qm-1.png"
-              alt=""
-            />
+            <img className="Modal-body__btn--img" src="../assets/modal/h-qm-1.png" alt="" />
           </Link>
           <div className="Modal-body__message">힐링음원</div>
         </div>
         <div className="Modal-body__btn">
           <Link to="/selfDiagnosis">
-            <img
-              className="Modal-body__btn--img"
-              src="../assets/modal/h-qm-2.png"
-              alt=""
-            />
+            <img className="Modal-body__btn--img" src="../assets/modal/h-qm-2.png" alt="" />
           </Link>
           <div className="Modal-body__message">자가진단</div>
         </div>
         <div className="Modal-body__btn">
           <Link to="/healingVideos">
-            <img
-              className="Modal-body__btn--img"
-              src="../assets/modal/h-qm-3.png"
-              alt=""
-            />
+            <img className="Modal-body__btn--img" src="../assets/modal/h-qm-3.png" alt="" />
           </Link>
           <div className="Modal-body__message">힐링영상</div>
         </div>
         <div className="Modal-body__btn">
           <Link to="/historyManagement">
-            <img
-              className="Modal-body__btn--img"
-              src="../assets/modal/h-qm-4.png"
-              alt=""
-            />
+            <img className="Modal-body__btn--img" src="../assets/modal/h-qm-4.png" alt="" />
           </Link>
           <div className="Modal-body__message">이력관리</div>
         </div>
         <div className="Modal-body__btn">
           <Link to="/controller">
-            <img
-              className="Modal-body__btn--img"
-              src="../assets/modal/control_on.png"
-              alt=""
-            />
+            <img className="Modal-body__btn--img" src="../assets/modal/control_on.png" alt="" />
           </Link>
           <div className="Modal-body__message">리모콘</div>
         </div>
@@ -118,7 +94,7 @@ const Modal: any = ({ state, closeModal, setModalState, history }: any) => {
         <div className="Modal-body__btn">
           <img
             className="Modal-body__btn--img"
-            onClick={(event) => {
+            onClick={event => {
               closeModal(event);
             }}
             src="../assets/modal/h-qm-5.png"

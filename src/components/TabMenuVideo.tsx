@@ -1,16 +1,16 @@
-import "./TabMenuVideo.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import './TabMenuVideo.css';
+import {Link} from 'react-router-dom';
+import {useState} from 'react';
 
-const TabMenuVideo: any = ({ children, setCurrentIndex }: any) => {
+const TabMenuVideo: any = ({children, setCurrentIndex}: any) => {
   const [currentTab, setCurrentTab] = useState(0);
 
   const menuArr = [
-    { name: "동물", content: "Tab menu ONE" },
-    { name: "일상", content: "Tab menu TWO" },
-    { name: "음식", content: "Tab menu THREE" },
-    { name: "자연", content: "Tab menu FOUR" },
-    { name: "파티클", content: "Tab menu FOUR" },
+    {name: '동물', content: 'Tab menu ONE'},
+    {name: '일상', content: 'Tab menu TWO'},
+    {name: '음식', content: 'Tab menu THREE'},
+    {name: '자연', content: 'Tab menu FOUR'},
+    {name: '파티클', content: 'Tab menu FOUR'},
   ];
 
   const selectMenuHandler = (index: any) => {
@@ -24,11 +24,7 @@ const TabMenuVideo: any = ({ children, setCurrentIndex }: any) => {
           return (
             <li
               key={index}
-              className={
-                currentTab === index
-                  ? "TabMenuVideo-submenu TabMenuVideo-focused"
-                  : "TabMenuVideo-submenu"
-              }
+              className={currentTab === index ? 'TabMenuVideo-submenu TabMenuVideo-focused' : 'TabMenuVideo-submenu'}
               onClick={() => {
                 setCurrentIndex(index);
                 selectMenuHandler(index);
@@ -43,10 +39,7 @@ const TabMenuVideo: any = ({ children, setCurrentIndex }: any) => {
         <div className="TabMenuVideo-body__search">
           <div className="TabMenuVideo-body__search--searchingBar">
             <div className="TabMenuVideo-body__search--searchingBar-search">
-              <input
-                className="TabMenuVideo-body__search--searchingBar-searchInput"
-                type="text"
-              />
+              <input className="TabMenuVideo-body__search--searchingBar-searchInput" type="text" />
             </div>
             <div className="TabMenuVideo-body__search--searchingBar-searchIMG">
               <img
@@ -54,7 +47,7 @@ const TabMenuVideo: any = ({ children, setCurrentIndex }: any) => {
                 src="../assets/healingSounds/h-sub-img-01.png"
                 alt=""
                 onClick={() => {
-                  alert("검색");
+                  alert('검색');
                 }}
               />
             </div>

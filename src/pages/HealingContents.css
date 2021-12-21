@@ -1,16 +1,18 @@
 .HealingContents-body__background {
   width: 100%;
   height: 100vh;
-  background-image: url("../assets/controller/hrc-img-02.png");
+  background-image: url('../assets/controller/hrc-img-02.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .HealingContents-body__sub1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   width: 100%;
   height: 10%;
-  border: 1px solid black;
 }
 
 .HealingContents-body__sub2 {
@@ -20,7 +22,6 @@
   justify-content: flex-end;
   width: 100%;
   height: 45%;
-  border: 1px solid black;
   padding-bottom: 20px;
 }
 
@@ -41,8 +42,7 @@
   color: white;
   font-size: 22px;
   font-weight: bold;
-  text-shadow: -0.5px 0 #3fb9ff, 0 0.5px #3fb9ff, 0.5px 0 #3fb9ff,
-    0 -0.5px #3fb9ff;
+  text-shadow: -0.5px 0 #3fb9ff, 0 0.5px #3fb9ff, 0.5px 0 #3fb9ff, 0 -0.5px #3fb9ff;
 }
 .HealingContents-body__sub2 > div:nth-child(2) > div > span {
   color: #00ffae;
@@ -54,7 +54,6 @@
   justify-content: center;
   width: 100%;
   height: 45%;
-  border: 1px solid black;
   padding-bottom: 30px;
 }
 

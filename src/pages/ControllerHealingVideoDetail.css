@@ -1,0 +1,121 @@
+.ControllerHealingVideoDetail-body__background {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../assets/controller/hrc-img-02.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ControllerHealingVideoDetail-body__sub1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  height: 10%;
+  border: 1px solid black;
+}
+
+.ControllerHealingVideoDetail-BeforeButton__body {
+  width: 110px;
+  height: 35px;
+  margin-top: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.ControllerHealingVideoDetail-BeforeButton__body > div:first-child:active {
+  opacity: 0.7;
+}
+
+.ControllerHealingVideoDetail-BeforeButton__body > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ControllerHealingVideoDetail-BeforeButton__body--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: white;
+}
+
+.ControllerHealingVideoDetail-body__sub2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+}
+
+.ControllerHealingVideoDetail-body__sub2 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ControllerHealingVideoDetail-body__sub2 > div > div:first-child {
+  width: 30px;
+  height: 30px;
+}
+
+.ControllerHealingVideoDetail-body__sub2 > div > div:first-child > img {
+  width: 100%;
+  height: 100%;
+}
+
+.ControllerHealingVideoDetail-body__sub2 > div > div:last-child {
+  margin-left: 15px;
+  color: white;
+  font-size: 15px;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.ControllerHealingVideoDetail-body__sub3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+  border: 1px solid black;
+}
+
+.ControllerHealingVideoDetail-body__sub3 > img {
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ControllerHealingVideoDetail-body__sub4 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 35%;
+  border: 1px solid black;
+}
+
+.ControllerHealingVideoDetail-body__sub4 > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 250px;
+  height: 30px;
+  background-color: #08285c;
+  opacity: 0.8;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+}

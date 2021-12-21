@@ -7,3 +7,4 @@ background-image: url("../assets/selfDiagnosis/h-sub-2-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  
